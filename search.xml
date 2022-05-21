@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>敢于重新开始</title>
+      <link href="/archives/c144f20a.html"/>
+      <url>/archives/c144f20a.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h1><p>2021，发生太多难以言喻之事，在此记录，近作怀念。<br>3月迎来考研失败，打击时常都有，但以往每次，我都可以记得自己的珍贵，努力保持自信与对生活的热爱。<br>然而这次的失败，让我开始怀疑自己，怀疑自己的智商，怀疑自己的能力，怀疑自己的一切。这使得我深陷无尽的自卑的深渊之中。<br>就像是从落差感极强的峰顶跌落谷底，摔得粉身碎骨，内心曾以为自己一无是处，消极悲观注入体内，无人可以倾诉与分享。<br>四月份开始调剂，历经坎坷，感恩海大收我，如今已是感激涕零。<br>暑假在家幸得家人陪伴，稍有好转，八月来校，我已是海大一份子，青岛四年生活，这座美丽城市时不时给我最大的慰藉。<br>研一生活，幸得导师，师姐教导，略有收获。已是极为庆幸。<br>十二月份，与往事断绝，情场失意。看清对方只是不舍我的关怀备至，且未有半点珍惜，遂断绝。找回迷失已久自我，幸得好导师，好师姐，好兄弟，聊以慰藉。<br>敢于将以往放下，开始新生活，珍惜眼前人。蝴蝶之所以美丽，是因为破蛹而出的一瞬，丢弃了曾经禁锢的牢笼。成长的一瞬，便应该丢弃助你成长的枷锁，人生得以轻松洒脱。</p><h1 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h1><p>来此与之前学习大不相同，但依然需要新的开端，敢于开启，勇往直前。</p><h1 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h1><p>程序代码可以运行无数遍之后，亦可以重新开始运行，下一次就可能找到问题的关键。<br>搭建博客也是一样，不断重来，不断摸索着前进。<br>不要畏惧重新开始，重新开始不是回到原点，而是重新上升了一个层次，并且有可能跳出了死循环。<br>也许所有死结最好的解决方法，就是重启。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 生活 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 读书与生活 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>基于Fortran90的Rpstar3大气辐射传输系统源代码文档</title>
+      <link href="/archives/8c1f6a98.html"/>
+      <url>/archives/8c1f6a98.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>本文档修订于2011年6月28日</p></blockquote><h1 id="“R-Pstar3”简介？"><a href="#“R-Pstar3”简介？" class="headerlink" title="“R-Pstar3”简介？"></a>“R-Pstar3”简介？</h1><p>“Pstar3”是用于在大气-陆地&#x2F;海洋耦合系统中模拟极化辐射场的通用软件包。”R-pstar3’是一个类似Rstar的并用于合并和集成Rstar和Pstar的Pstar包。该模拟基于离散纵坐标&#x2F;矩阵算子法在平面平行问题中的应用分为若干均匀层的大气，下伏地面或海洋表面。Pstar3还能够处理辐射传输与平面平行海洋耦合（Ota et al.，2010）。</p><p>最初的Pstar3最初是为观测温室气体而开发的日本国家环境研究所卫星（GOSAT）项目（NIES），由日本JAXA&#x2F;EORC运营。R-Pstar3包通过Open CLASTR项目分发(<a href="http://157.82.240.167/~clastr/%EF%BC%89%E3%80%82">http://157.82.240.167./~clastr/）。</a></p><h1 id="软件包程序清单"><a href="#软件包程序清单" class="headerlink" title="软件包程序清单"></a>软件包程序清单</h1><p>README: 自述文档。</p><p>Makefile: 生成可执行文件的配置文件，可以利用此文档一键编译。</p><p>Mkinclude: Makefile中配置程序中使用的的编译器设置。</p><p>主要的R-pstar3软件包f90主程序。</p><p>R-pstar3输入参数数据样本文件</p><p>（默认值：指向数据0的符号链接）</p><p>Lambert表面的data0非极化辐射</p><p>data10海洋表面的非极化辐射（海洋层&#x3D;0）</p><p>data1海洋表面的非极化辐射（海洋层&#x3D;2）</p><p>Lambert表面的data0p极化辐射</p><p>data10p海洋表面极化辐射（海洋层&#x3D;0）</p><p>data1p海洋表面极化辐射（海洋层&#x3D;2）</p><p>out\u测试R-pstar3输出文件的示例文件，以比较其他包</p><p>对应于数据0,10,1。。。</p><p>如果你想得到同样的结果，</p><p>你应该选择Frohlich和Shaw 1980</p><p>并在LBR&#x2F;pstr4中注释掉l.528-529。f90。</p><p>这些数据库文件是从ps3r\U dbs\U 200329中提取的。焦油广州。</p><p>MLATMD大气剖面文件</p><p>rstar7的AERDB粒子配置文件</p><p>PKRNL。OUT Mie内核文件（增加Mie表格的角度网格）</p><p>pyphsf\u vis。dat六边形固体冰柱数据（NIR可见）</p><p>pyphsf\u ir。dat六角固体冰柱数据（IR）</p><p>（以上2个文件的字节顺序为little endian）</p><p>（这些文件与极化辐射不对应）</p><p>dkrnl&#x2F;PKRNL。OUT\u asp？？？球体散射数据</p><p>（？？？表示宽高比；宽高比&#x3D;？.？？）</p><p>（这些文件与非极化辐射不对应）</p><p>ckd公司。g、 CHU 2\U 1e3\U big endian机器的大k分布文件</p><p>ckd公司。g、 little endian机器的ch\u 2\u 1e3\u ltl k分发文件</p><p>ckd公司。g、 ch\U 2\U 2e3\U big-finer大端机器的k分布文件</p><p>ckd公司。g、 用于little endian机器的ch\u 2\u 2e3\u ltl精细k分布文件</p><h1 id="你应该做什么？"><a href="#你应该做什么？" class="headerlink" title="你应该做什么？"></a>你应该做什么？</h1><h1 id="实验参数文件：数据"><a href="#实验参数文件：数据" class="headerlink" title="实验参数文件：数据"></a>实验参数文件：数据</h1><h1 id="气体参数文件：MLATMD"><a href="#气体参数文件：MLATMD" class="headerlink" title="气体参数文件：MLATMD"></a>气体参数文件：MLATMD</h1><h1 id="粒子参数文件：AERDB"><a href="#粒子参数文件：AERDB" class="headerlink" title="粒子参数文件：AERDB"></a>粒子参数文件：AERDB</h1><h1 id="分层设计"><a href="#分层设计" class="headerlink" title="分层设计"></a>分层设计</h1><h1 id="主程序结构"><a href="#主程序结构" class="headerlink" title="主程序结构"></a>主程序结构</h1><h1 id="来自R-Pstar3的输出"><a href="#来自R-Pstar3的输出" class="headerlink" title="来自R-Pstar3的输出"></a>来自R-Pstar3的输出</h1><h1 id="调整参数大小"><a href="#调整参数大小" class="headerlink" title="调整参数大小"></a>调整参数大小</h1><h1 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h1><h1 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h1><h1 id="出资人"><a href="#出资人" class="headerlink" title="出资人"></a>出资人</h1>]]></content>
+      
+      
+      <categories>
+          
+          <category> 程序代码 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 辐射传输 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>惊人的美</title>
       <link href="/archives/49977e84.html"/>
       <url>/archives/49977e84.html</url>
@@ -13,7 +63,7 @@
       
       <categories>
           
-          <category> 读书生活 </category>
+          <category> 生活 </category>
           
       </categories>
       
