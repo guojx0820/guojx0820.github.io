@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 3423921 */
-  src: url('//at.alicdn.com/t/font_3423921_8sw14dpfetb.woff2?t=1653385720271') format('woff2'),
-       url('//at.alicdn.com/t/font_3423921_8sw14dpfetb.woff?t=1653385720271') format('woff'),
-       url('//at.alicdn.com/t/font_3423921_8sw14dpfetb.ttf?t=1653385720271') format('truetype');
+  src: url('//at.alicdn.com/t/font_3423921_vb8a6e4kbzr.woff2?t=1653391191605') format('woff2'),
+       url('//at.alicdn.com/t/font_3423921_vb8a6e4kbzr.woff?t=1653391191605') format('woff'),
+       url('//at.alicdn.com/t/font_3423921_vb8a6e4kbzr.ttf?t=1653391191605') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,22 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-jianshu:before {
+  content: "\e622";
+}
+
+.icon-csdn:before {
+  content: "\e60d";
+}
+
+.icon-tubiaozhizuomoban-:before {
+  content: "\e601";
+}
+
+.icon-gmail:before {
+  content: "\e60c";
 }
 
 .icon-links:before {
@@ -25,30 +41,6 @@
   content: "\e89a";
 }
 
-.icon-weixinfang:before {
-  content: "\e61b";
-}
-
-.icon-QQkongjian:before {
-  content: "\e7d9";
-}
-
-.icon-Github:before {
-  content: "\e605";
-}
-
-.icon-github:before {
-  content: "\e600";
-}
-
-.icon-csdn:before {
-  content: "\e601";
-}
-
-.icon-githubbox:before {
-  content: "\e602";
-}
-
 .icon-QQ:before {
   content: "\e698";
 }
@@ -61,44 +53,12 @@
   content: "\e65b";
 }
 
-.icon-Github1:before {
-  content: "\e604";
-}
-
-.icon-bilibili:before {
-  content: "\e603";
-}
-
-.icon-jianshu:before {
-  content: "\e606";
-}
-
-.icon-jianshu1:before {
-  content: "\e607";
-}
-
-.icon-Gmail:before {
-  content: "\e66a";
-}
-
-.icon-QQ1:before {
-  content: "\e641";
-}
-
-.icon-Github2:before {
+.icon-Github:before {
   content: "\e612";
-}
-
-.icon-github1:before {
-  content: "\e722";
 }
 
 .icon-csdn1:before {
   content: "\e608";
-}
-
-.icon-Bilibili:before {
-  content: "\e6b9";
 }
 
 .icon-bilibili1:before {
