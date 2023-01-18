@@ -2,7 +2,97 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.guojxblog.cn/archives/61521166.html</loc>
+    <loc>https://www.guojxblog.cn/tags/index.html</loc>
+    
+    <lastmod>2023-01-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.guojxblog.cn/photos/index.html</loc>
+    
+    <lastmod>2023-01-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.guojxblog.cn/notes/index.html</loc>
+    
+    <lastmod>2023-01-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.guojxblog.cn/music/index.html</loc>
+    
+    <lastmod>2023-01-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.guojxblog.cn/movies/index.html</loc>
+    
+    <lastmod>2023-01-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.guojxblog.cn/link/index.html</loc>
+    
+    <lastmod>2023-01-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.guojxblog.cn/ideas/index.html</loc>
+    
+    <lastmod>2023-01-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.guojxblog.cn/comment/index.html</loc>
+    
+    <lastmod>2023-01-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.guojxblog.cn/categories/index.html</loc>
+    
+    <lastmod>2023-01-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.guojxblog.cn/books/index.html</loc>
+    
+    <lastmod>2023-01-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.guojxblog.cn/about/index.html</loc>
     
     <lastmod>2023-01-18</lastmod>
     
@@ -12,6 +102,15 @@
   
   <url>
     <loc>https://www.guojxblog.cn/archives/3a816938.html</loc>
+    
+    <lastmod>2023-01-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.guojxblog.cn/archives/61521166.html</loc>
     
     <lastmod>2023-01-18</lastmod>
     
@@ -185,105 +284,6 @@
     <loc>https://www.guojxblog.cn/archives/4360a9bd.html</loc>
     
     <lastmod>2023-01-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.guojxblog.cn/about/index.html</loc>
-    
-    <lastmod>2022-05-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.guojxblog.cn/link/index.html</loc>
-    
-    <lastmod>2022-05-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.guojxblog.cn/photos/index.html</loc>
-    
-    <lastmod>2022-05-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.guojxblog.cn/tags/index.html</loc>
-    
-    <lastmod>2022-05-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.guojxblog.cn/categories/index.html</loc>
-    
-    <lastmod>2022-05-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.guojxblog.cn/notes/index.html</loc>
-    
-    <lastmod>2022-05-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.guojxblog.cn/ideas/index.html</loc>
-    
-    <lastmod>2022-05-14</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.guojxblog.cn/movies/index.html</loc>
-    
-    <lastmod>2022-05-13</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.guojxblog.cn/comment/index.html</loc>
-    
-    <lastmod>2022-05-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.guojxblog.cn/music/index.html</loc>
-    
-    <lastmod>2022-05-12</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.guojxblog.cn/books/index.html</loc>
-    
-    <lastmod>2022-05-12</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
