@@ -369,13 +369,6 @@
   </url>
   
   <url>
-    <loc>https://www.guojxblog.cn/tags/Python%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/</loc>
-    <lastmod>2023-03-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.guojxblog.cn/tags/Python/</loc>
     <lastmod>2023-03-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -383,7 +376,7 @@
   </url>
   
   <url>
-    <loc>https://www.guojxblog.cn/tags/Python%E5%8D%AB%E6%98%9F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/</loc>
+    <loc>https://www.guojxblog.cn/tags/Python%E6%95%B0%E5%AD%97%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/</loc>
     <lastmod>2023-03-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -397,6 +390,13 @@
   </url>
   
   <url>
+    <loc>https://www.guojxblog.cn/tags/Python%E5%8D%AB%E6%98%9F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/</loc>
+    <lastmod>2023-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.guojxblog.cn/tags/%E9%81%A5%E6%84%9F/</loc>
     <lastmod>2023-03-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -404,14 +404,14 @@
   </url>
   
   <url>
-    <loc>https://www.guojxblog.cn/tags/%E7%BD%91%E7%BB%9C%E4%B8%8E%E6%B5%8F%E8%A7%88%E5%99%A8/</loc>
+    <loc>https://www.guojxblog.cn/tags/%E4%BA%BA%E7%94%9F/</loc>
     <lastmod>2023-03-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://www.guojxblog.cn/tags/%E4%BA%BA%E7%94%9F/</loc>
+    <loc>https://www.guojxblog.cn/tags/%E7%BD%91%E7%BB%9C%E4%B8%8E%E6%B5%8F%E8%A7%88%E5%99%A8/</loc>
     <lastmod>2023-03-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
