@@ -1,0 +1,50 @@
+{
+  "name": "guojx0820.github.io",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Hexo source for https://www.guojxblog.cn",
+  "scripts": {
+    "clean": "hexo clean",
+    "build": "hexo generate",
+    "server": "hexo clean && hexo generate && hexo server",
+    "preview": "hexo server",
+    "new:post": "hexo new post",
+    "check:secrets": "node tools/check-secrets.mjs",
+    "check:abbrlinks": "node tools/check-abbrlinks.mjs",
+    "check": "npm run check:secrets && npm run check:abbrlinks && npm run build"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "hexo": {
+    "version": "8.1.2"
+  },
+  "dependencies": {
+    "hexo": "8.1.2",
+    "hexo-abbrlink": "2.2.1",
+    "hexo-bilibili-bangumi": "2.1.9",
+    "hexo-filter-mathjax": "0.11.1",
+    "hexo-filter-nofollow": "2.0.2",
+    "hexo-generator-archive": "2.0.0",
+    "hexo-generator-category": "2.0.0",
+    "hexo-generator-index": "4.0.0",
+    "hexo-generator-search": "2.4.3",
+    "hexo-generator-sitemap": "3.0.1",
+    "hexo-generator-tag": "2.0.0",
+    "hexo-lazyload-image": "1.0.13",
+    "hexo-renderer-ejs": "2.0.0",
+    "hexo-renderer-marked": "7.0.1",
+    "hexo-renderer-pug": "3.0.0",
+    "hexo-renderer-stylus": "3.0.1",
+    "hexo-server": "3.0.0",
+    "hexo-theme-butterfly": "5.7.0",
+    "hexo-wordcount": "6.0.1"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^7.3.1",
+    "fast-glob": "3.3.3",
+    "gray-matter": "4.0.3",
+    "hexo-cli": "4.3.2",
+    "picgo": "3.0.2"
+  }
+}

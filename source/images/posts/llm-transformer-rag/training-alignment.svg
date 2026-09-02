@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">大模型训练与对齐流程</title>
+  <desc id="desc">展示从数据治理、预训练、指令微调、偏好优化到评测发布的工程流程。</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 L10 5 L0 10z" fill="#1b5f7a"/>
+    </marker>
+    <style>
+      .t{font-family:Arial,'Microsoft YaHei',sans-serif;fill:#062b40}
+      .h{font-size:27px;font-weight:700}
+      .s{font-size:18px}
+      .box{fill:#eef9ff;stroke:#1b7798;stroke-width:3;rx:20}
+      .warm{fill:#fff5dc;stroke:#c18a20;stroke-width:3;rx:20}
+      .arrow{stroke:#1b5f7a;stroke-width:4;fill:none;marker-end:url(#arrow)}
+    </style>
+  </defs>
+  <rect width="1200" height="560" fill="#fbfdff"/>
+  <text x="600" y="54" text-anchor="middle" class="t h">训练不是一个动作，而是一条可审计流水线</text>
+  <rect x="45" y="140" width="175" height="130" class="box"/>
+  <text x="132" y="188" text-anchor="middle" class="t h">数据治理</text>
+  <text x="132" y="225" text-anchor="middle" class="t s">清洗 去重 过滤</text>
+  <path class="arrow" d="M225 205 H300"/>
+  <rect x="305" y="140" width="175" height="130" class="box"/>
+  <text x="392" y="188" text-anchor="middle" class="t h">预训练</text>
+  <text x="392" y="225" text-anchor="middle" class="t s">预测下个 token</text>
+  <path class="arrow" d="M485 205 H560"/>
+  <rect x="565" y="140" width="175" height="130" class="warm"/>
+  <text x="652" y="188" text-anchor="middle" class="t h">指令微调</text>
+  <text x="652" y="225" text-anchor="middle" class="t s">学会按任务回答</text>
+  <path class="arrow" d="M745 205 H820"/>
+  <rect x="825" y="140" width="175" height="130" class="warm"/>
+  <text x="912" y="188" text-anchor="middle" class="t h">偏好优化</text>
+  <text x="912" y="225" text-anchor="middle" class="t s">RLHF 或 DPO</text>
+  <path class="arrow" d="M1005 205 H1080"/>
+  <rect x="45" y="350" width="175" height="120" class="box"/>
+  <text x="132" y="398" text-anchor="middle" class="t h">评测</text>
+  <text x="132" y="433" text-anchor="middle" class="t s">能力 安全 退化</text>
+  <path class="arrow" d="M1080 205 C1145 205 1145 410 1005 410"/>
+  <rect x="825" y="350" width="175" height="120" class="box"/>
+  <text x="912" y="398" text-anchor="middle" class="t h">灰度发布</text>
+  <text x="912" y="433" text-anchor="middle" class="t s">监控与回滚</text>
+  <path class="arrow" d="M820 410 H225"/>
+  <text x="600" y="517" text-anchor="middle" class="t s">线上反馈进入下一轮数据治理，但必须经过隐私、安全和质量过滤。</text>
+</svg>
