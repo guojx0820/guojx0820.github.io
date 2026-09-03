@@ -155,6 +155,28 @@ schannel: SEC_E_UNTRUSTED_ROOT (0x80090325)
 
 含义是：Git for Windows 当前使用 Windows 系统证书库，也就是 `schannel`，但它不信任当前 HTTPS 证书链。常见原因包括 Windows 根证书过旧、Git for Windows 版本旧、代理/校园网/杀毒软件进行 HTTPS 扫描，或者网络中间证书没有被系统信任。
 
+如果后续又出现：
+
+```text
+fatal: unable to access 'https://github.com/...':
+Recv failure: Connection was reset
+```
+
+或：
+
+```text
+Failed to connect to github.com port 443
+```
+
+说明 HTTPS 连接本身被当前网络重置或阻断。可以用下面两条命令确认：
+
+```powershell
+Test-NetConnection github.com -Port 443
+Test-NetConnection github.com -Port 22
+```
+
+如果 `443` 不通但 `22` 通，优先走 SSH 发布。
+
 安全处理顺序如下。
 
 方案 A：优先使用 GitHub Desktop
@@ -203,11 +225,38 @@ git config --global http.sslBackend schannel
 如果 HTTPS 长期被代理、杀毒软件或网络环境拦截，SSH 是更稳定的方案：
 
 ```powershell
-ssh-keygen -t ed25519 -C "guojx0820 GitHub Pages"
-Get-Content $env:USERPROFILE\.ssh\id_ed25519.pub
+ssh-keygen -t ed25519 -C "guojx0820 GitHub Pages" -f $env:USERPROFILE\.ssh\id_ed25519_github_pages
+Get-Content $env:USERPROFILE\.ssh\id_ed25519_github_pages.pub
 ```
 
-把输出的公钥复制到 GitHub：Settings -> SSH and GPG keys -> New SSH key。添加后测试：
+如果本机已经生成过博客专用 key，不要重复覆盖私钥，直接查看公钥：
+
+```powershell
+Get-Content $env:USERPROFILE\.ssh\id_ed25519_github_pages.pub
+```
+
+把输出的整行公钥复制到 GitHub：
+
+1. 打开 GitHub 网页并登录 `guojx0820`。
+2. 右上角头像 -> Settings。
+3. 左侧 SSH and GPG keys。
+4. 点击 New SSH key。
+5. Title 填 `MateBook14 GitHub Pages`。
+6. Key type 选择 Authentication Key。
+7. Key 粘贴 `.pub` 文件里那一整行。
+8. 点击 Add SSH key。
+
+为了让 Git 自动使用这把博客专用 key，本机可创建或检查 `C:\Users\Leo\.ssh\config`：
+
+```text
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile C:\Users\Leo\.ssh\id_ed25519_github_pages
+  IdentitiesOnly yes
+```
+
+添加公钥后测试：
 
 ```powershell
 ssh -T git@github.com
@@ -216,6 +265,20 @@ git remote set-url origin git@github.com:guojx0820/guojx0820.github.io.git
 git ls-remote origin
 git push origin main
 ```
+
+第一次 `ssh -T git@github.com` 可能提示是否信任 GitHub 主机指纹，输入 `yes`。成功时通常会看到类似：
+
+```text
+Hi guojx0820! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
+如果仍看到：
+
+```text
+git@github.com: Permission denied (publickey).
+```
+
+说明公钥还没有加到 GitHub，或者 GitHub 账号加错了 key。重新检查 `.pub` 文件内容是否完整复制。
 
 不要使用下面这种做法：
 
