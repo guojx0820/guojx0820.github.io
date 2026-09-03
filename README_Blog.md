@@ -44,6 +44,38 @@ npm run check
 
 `npm run check` 会依次执行秘密扫描、文章 `abbrlink` 检查和 Hexo 构建。只要这一条通过，说明本地环境基本健康。
 
+### 必须先进入项目目录
+
+PowerShell 打开后默认目录通常是 `C:\Users\Leo`，这个目录不是博客项目目录，里面没有 `package.json`。如果在这里直接运行：
+
+```powershell
+npm run check
+```
+
+会看到类似错误：
+
+```text
+npm error code ENOENT
+npm error path C:\Users\Leo\package.json
+npm error enoent Could not read package.json
+```
+
+这不是博客坏了，也不是 npm 坏了，只是当前目录不对。每次维护博客、预览博客、提交博客前，都先执行：
+
+```powershell
+cd D:\Projects\Blog\guojx0820.github.io
+npm run check
+```
+
+如果不确定自己当前在哪个目录，可以运行：
+
+```powershell
+pwd
+dir package.json
+```
+
+只有 `pwd` 显示 `D:\Projects\Blog\guojx0820.github.io`，并且 `dir package.json` 能看到项目文件时，后续 `npm run check`、`npm run server`、`git status`、`git push origin main` 才是针对这个博客项目执行。
+
 ## 三、GitHub 与 Pages 设置
 
 第一次迁移发布前，需要在浏览器里完成三件事：
@@ -88,6 +120,110 @@ gh auth status
 登录时选择 GitHub.com、HTTPS、browser/device code。凭据会进入 Windows 凭据管理器，不要写进 remote URL、Markdown、YAML 或脚本。
 
 如果 `winget` 也不可用，就不要在博客项目里折腾环境变量或旧 Token。直接去 `https://cli.github.com/` 下载 Windows 安装包，或者继续使用 GitHub Desktop。
+
+### 发布前检查与推送
+
+每次正式推送前，建议按这个顺序执行：
+
+```powershell
+cd D:\Projects\Blog\guojx0820.github.io
+npm run check
+git status
+git log --oneline -3
+git remote -v
+git ls-remote origin
+git push origin main
+```
+
+各命令含义：
+
+1. `npm run check`：确认静态博客能生成，密钥扫描和文章链接检查通过。
+2. `git status`：确认哪些文件将被提交，避免误提交临时文件。
+3. `git log --oneline -3`：确认最近提交里有你要发布的内容。
+4. `git remote -v`：确认远端是 `https://github.com/guojx0820/guojx0820.github.io.git` 或已配置好的 SSH 地址。
+5. `git ls-remote origin`：先测试和 GitHub 的连接与证书是否正常。
+6. `git push origin main`：把 `main` 分支推到 GitHub，由 GitHub Actions 自动发布 Pages。
+
+### Git 推送证书错误：SEC_E_UNTRUSTED_ROOT
+
+如果推送时出现：
+
+```text
+fatal: unable to access 'https://github.com/guojx0820/guojx0820.github.io.git/':
+schannel: SEC_E_UNTRUSTED_ROOT (0x80090325)
+```
+
+含义是：Git for Windows 当前使用 Windows 系统证书库，也就是 `schannel`，但它不信任当前 HTTPS 证书链。常见原因包括 Windows 根证书过旧、Git for Windows 版本旧、代理/校园网/杀毒软件进行 HTTPS 扫描，或者网络中间证书没有被系统信任。
+
+安全处理顺序如下。
+
+方案 A：优先使用 GitHub Desktop
+
+1. 打开 GitHub Desktop。
+2. File -> Add local repository。
+3. 选择 `D:\Projects\Blog\guojx0820.github.io`。
+4. 登录 GitHub 账号。
+5. 如果左下角有未提交内容，先 Commit to main。
+6. 点击 Push origin。
+
+GitHub Desktop 通常会帮你处理登录凭据和证书链，比手动折腾 Token 更稳，也不会把 Token 写进项目文件。
+
+方案 B：更新 Git for Windows 和系统根证书
+
+1. 打开 Windows Update，安装系统更新，尤其是根证书相关更新。
+2. 更新 Git for Windows：可以从 `https://git-scm.com/download/win` 下载最新安装包。
+3. 重新打开 PowerShell，运行：
+
+   ```powershell
+   cd D:\Projects\Blog\guojx0820.github.io
+   git --version
+   git ls-remote origin
+   git push origin main
+   ```
+
+方案 C：切换 Git TLS 后端为 OpenSSL
+
+如果系统证书链问题暂时解决不了，可以让 Git 使用自带 OpenSSL 证书包：
+
+```powershell
+git config --global http.sslBackend openssl
+cd D:\Projects\Blog\guojx0820.github.io
+git ls-remote origin
+git push origin main
+```
+
+如果以后想切回 Windows 证书库：
+
+```powershell
+git config --global http.sslBackend schannel
+```
+
+方案 D：改用 SSH remote
+
+如果 HTTPS 长期被代理、杀毒软件或网络环境拦截，SSH 是更稳定的方案：
+
+```powershell
+ssh-keygen -t ed25519 -C "guojx0820 GitHub Pages"
+Get-Content $env:USERPROFILE\.ssh\id_ed25519.pub
+```
+
+把输出的公钥复制到 GitHub：Settings -> SSH and GPG keys -> New SSH key。添加后测试：
+
+```powershell
+ssh -T git@github.com
+cd D:\Projects\Blog\guojx0820.github.io
+git remote set-url origin git@github.com:guojx0820/guojx0820.github.io.git
+git ls-remote origin
+git push origin main
+```
+
+不要使用下面这种做法：
+
+```powershell
+git config --global http.sslVerify false
+```
+
+它会关闭 SSL 证书校验，虽然有时能“临时推上去”，但会让 Git 无法确认你连接的真是 GitHub，存在中间人攻击风险。本博客维护流程禁止使用这种方式。
 
 ## 四、日常写文章
 
