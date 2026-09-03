@@ -27,9 +27,9 @@ date: 2026-09-02 17:30:00
 
 今天主流自回归大语言模型的训练目标可以写得很朴素：给定已经出现的 token 序列 $x_1, x_2, \ldots, x_{t-1}$，预测下一个 token $x_t$ 的概率分布：
 
-$$
-P(x_1,\ldots,x_T)=\prod_{t=1}^{T}P(x_t|x_{<t})
-$$
+<script type="math/tex; mode=display">
+P(x_1,\ldots,x_T)=\prod_{t=1}^{T}P(x_t\mid x_{<t})
+</script>
 
 这里的 token 不一定等同于汉字、英文单词或标点。现代 tokenizer 往往使用 BPE、SentencePiece 或类似子词算法，把文本切成频繁片段。中文里一个 token 可能是一个字、一个词的一部分，也可能是一段常见字符组合；代码里一个 token 也可能是缩进、括号或关键字片段。
 
@@ -45,9 +45,9 @@ Transformer 的输入通常经过三步：先分词得到 token ID，再通过 e
 
 自注意力的核心公式是：
 
-$$
-Attention(Q,K,V)=softmax(\frac{QK^T}{\sqrt{d_k}})V
-$$
+<script type="math/tex; mode=display">
+\operatorname{Attention}(Q,K,V)=\operatorname{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+</script>
 
 其中 $Q$ 是 query，$K$ 是 key，$V$ 是 value。直观理解：当前位置用 query 去和所有历史位置的 key 做相似度匹配，softmax 得到权重，再对 value 加权求和。除以 $\sqrt{d_k}$ 是为了控制点积尺度，避免维度变大后 softmax 过于尖锐。
 
@@ -81,9 +81,9 @@ SFT 之后，还需要处理偏好问题。两份答案都可能语法正确，�
 
 全量微调需要更新模型全部参数。对 7B、13B 甚至更大的模型来说，这意味着显存、存储和训练成本都很高。LoRA 的想法很优雅：不直接更新原始权重 $W$，而是冻结 $W$，只学习一个低秩增量：
 
-$$
+<script type="math/tex; mode=display">
 W' = W + \Delta W,\quad \Delta W = BA
-$$
+</script>
 
 如果 $W$ 的形状是 $d \times k$，而 $A$ 和 $B$ 的秩 $r$ 远小于 $d,k$，那么可训练参数量会大幅下降。模型主体保持不变，任务特定能力被压缩进少量 adapter 权重中。部署时可以动态加载不同 LoRA，也可以把 LoRA 合并回基座权重。
 

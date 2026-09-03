@@ -7,14 +7,28 @@
 - 源码目录：`D:\Projects\Blog\guojx0820.github.io`
 - 旧源码备份：`D:\Projects\Blog\_migration_backup_20260902-170134`
 - 博客框架：Hexo `8.1.2`
-- 主题：Butterfly `5.7.0`
-- Node：建议 `24.x LTS`，最低按 `package.json` 要求为 `>=20.19.0`
+- 主题：Butterfly `4.1.0`
+- Node：建议 `20.x LTS`；最低按 `package.json` 要求为 `>=18.18.0`
 - 生产域名：`https://www.guojxblog.cn`
 - GitHub Pages 仓库：`https://github.com/guojx0820/guojx0820.github.io`
 - 源码分支：`main`
 - 旧静态发布分支：`master`，暂时保留作为回滚点
 
+当前采用“保守迁移”方案：完整沿用旧站已经魔改好的 Butterfly 4 视觉体系，只把 Hexo、部分渲染器和本机 Windows/Codex 写作维护流程更新到当前电脑可稳定运行的版本。以后不主动升级主题、不重做 UI、不重新美化；除非你明确同意，否则 Codex 只能改文章、图片、文档、发布脚本和必要兼容修复。
+
 发布方式已经改成：本机修改源码，推送 `main`，GitHub Actions 自动构建并发布 Pages。以后不再使用旧 `_config.yml` 里的 `hexo deploy`，也不再把任何 Token 写入配置文件。
+
+### 为什么不升级主题
+
+这个博客的主题和美化经过长期魔改，旧主题结构、配置项、CSS 选择器、文章卡片布局、Live2D、iconfont 社交图标、半透明卡片和背景遮罩已经互相耦合。升级到 Butterfly 5/更新主题后，虽然依赖更“新”，但会改变 DOM 结构和配置语义，导致旧 CSS 大量失效，需要重新魔改，很容易出现图片、卡片透明层、侧栏、滚动文字、图标风格不一致的问题。
+
+因此本仓库的稳定策略是：
+
+1. 主题锁定为 `hexo-theme-butterfly@4.1.0`，不升级到 Butterfly 5。
+2. Hexo 可使用较新的 `8.1.2`，因为测试确认它能驱动旧 Butterfly 4 正常生成静态站点。
+3. 只做最小兼容修复，例如固定 `hexo-log@3.2.0`，避免旧主题脚本在新 Node/npm 环境下报错。
+4. 不恢复旧的 `hexo deploy`、Gitee、Coding.net、带 Token 的远程地址。
+5. 如需未来升级主题，先复制一份新分支/新任务单独测试，不能直接在主线替换。
 
 ## 二、首次环境恢复
 
@@ -38,15 +52,42 @@ npm run check
 2. 在 `guojx0820.github.io` 仓库 Settings -> Pages 中，把 Source 改成 GitHub Actions。
 3. 在 Pages 的 Custom domain 填入 `www.guojxblog.cn`，并开启 Enforce HTTPS。
 
-本机 Git 登录推荐 GitHub CLI：
+本机已经安装 GitHub Desktop 时，优先使用 GitHub Desktop 发布，不强制安装 GitHub CLI：
+
+1. 打开 GitHub Desktop。
+2. 菜单选择 File -> Add local repository。
+3. 选择 `D:\Projects\Blog\guojx0820.github.io`。
+4. 如果提示登录，按 GitHub Desktop 的浏览器登录流程登录 `guojx0820` 账号。
+5. 左下角填写提交说明，例如 `Restore old blog visual style`。
+6. 点击 Commit to main。
+7. 点击 Push origin。
+
+GitHub Desktop 会把凭据保存到 Windows 凭据管理器，不需要把 Token 写进任何配置文件。
+
+如果想使用命令行，GitHub CLI 是可选工具，不是必需工具。本机之前出现过：
 
 ```powershell
-winget install GitHub.cli
+gh : 无法将“gh”项识别为 cmdlet、函数、脚本文件或可运行程序的名称
+```
+
+这说明只安装了 Git/GitHub Desktop，没有安装 `gh`。先检查：
+
+```powershell
+winget --version
+where.exe gh
+```
+
+如果 `winget --version` 能输出版本号，可以安装 GitHub CLI：
+
+```powershell
+winget install --id GitHub.cli -e
 gh auth login
 gh auth status
 ```
 
 登录时选择 GitHub.com、HTTPS、browser/device code。凭据会进入 Windows 凭据管理器，不要写进 remote URL、Markdown、YAML 或脚本。
+
+如果 `winget` 也不可用，就不要在博客项目里折腾环境变量或旧 Token。直接去 `https://cli.github.com/` 下载 Windows 安装包，或者继续使用 GitHub Desktop。
 
 ## 四、日常写文章
 
@@ -79,7 +120,9 @@ npm run check
 npm run server
 ```
 
-浏览器打开 `http://localhost:4000` 预览首页、文章页、归档、标签、分类和搜索。确认无误后再发布：
+浏览器打开 `http://127.0.0.1:4001/` 预览首页、文章页、归档、标签、分类和搜索。本项目默认使用 `4001`，只是为了避开 `4000` 可能被临时服务、浏览器旧缓存或其他桌面软件影响的情况；如果你确认 `4000` 正常，也可以手动运行 `npx hexo server -p 4000 --host 127.0.0.1`。
+
+确认无误后再发布：
 
 ```powershell
 git status
@@ -90,32 +133,193 @@ git push origin main
 
 GitHub Actions 成功后，访问 `https://www.guojxblog.cn/archives/<abbrlink>.html` 验证最终页面。
 
-## 五、图片与 PicGo
+## 五、图片、阿里云 OSS 与 PicGo
 
-当前旧图床继续使用阿里云 OSS：
+当前旧图床继续使用阿里云 OSS。正式发布到 `www.guojxblog.cn` 的文章图片优先放 OSS，不建议长期依赖 GitHub Pages 直接加载大图，因为国内网络下 GitHub 静态资源可能慢或不稳定。
 
 - Bucket：`luomublog`
 - Region：青岛
 - 公共前缀：`https://luomublog.oss-cn-qingdao.aliyuncs.com/ImgHost/`
 
-建议在阿里云创建专用 RAM 用户，只允许读写 `luomublog/ImgHost/*`，不要使用主账号 AccessKey。PicGo 桌面版适合拖拽上传，项目内 PicGo-Core 适合 Codex 或命令行上传：
+### 推荐工作流
+
+1. Codex 写文章时，先把图片放到本地：
+
+   ```text
+   source/images/posts/<english-slug>/
+   ```
+
+2. 本地预览时，Markdown 可以先引用本地路径：
+
+   ```markdown
+   ![](/images/posts/<english-slug>/cover.png)
+   ```
+
+3. 发布前，把该目录图片上传到阿里云 OSS：
+
+   ```text
+   ImgHost/posts/<english-slug>/
+   ```
+
+4. 上传成功后，把文章 front matter 的 `cover` 和正文图片改成 OSS URL：
+
+   ```text
+   https://luomublog.oss-cn-qingdao.aliyuncs.com/ImgHost/posts/<english-slug>/cover.png
+   ```
+
+这样做的好处是：本地写作不依赖网络，正式访问不依赖 GitHub 图片加载。
+
+### 生成 OSS 上传清单
+
+例如新文章图片目录是 `source/images/posts/llm-transformer-rag/`，先运行：
+
+```powershell
+npm run images:oss-plan -- llm-transformer-rag
+```
+
+它会输出每个本地文件应该上传到 OSS 的目标路径，以及上传后的 URL。这个命令不会登录阿里云，也不会读取任何密钥，只用于生成清单。
+
+新大模型文章当前应上传的 4 个文件是：
+
+```text
+source/images/posts/llm-transformer-rag/cover.png
+source/images/posts/llm-transformer-rag/rag-vs-finetune.svg
+source/images/posts/llm-transformer-rag/training-alignment.svg
+source/images/posts/llm-transformer-rag/transformer-flow.svg
+```
+
+建议上传到：
+
+```text
+ImgHost/posts/llm-transformer-rag/
+```
+
+对应的最终 URL 形如：
+
+```text
+https://luomublog.oss-cn-qingdao.aliyuncs.com/ImgHost/posts/llm-transformer-rag/cover.png
+```
+
+### 使用阿里云 OSS 控制台上传
+
+1. 打开 OSS 控制台：`https://oss.console.aliyun.com/bucket/oss-cn-qingdao/luomublog/object?path=ImgHost%2F`
+2. 进入或创建目录：
+
+   ```text
+   ImgHost/posts/<english-slug>/
+   ```
+
+3. 上传本地图片，例如：
+
+   ```text
+   D:\Projects\Blog\guojx0820.github.io\source\images\posts\llm-transformer-rag\cover.png
+   ```
+
+4. 上传后用浏览器打开最终 URL，确认能直接访问。
+5. 再把文章里的 `/images/posts/...` 替换为 `https://luomublog.oss-cn-qingdao.aliyuncs.com/ImgHost/posts/...`。
+
+也可以在上传成功后用命令替换新文章里的本地图片路径：
+
+```powershell
+npm run images:oss-replace -- "source/_posts/从-Transformer-到大语言模型：预训练、对齐、LoRA、RAG-与推理优化.md" llm-transformer-rag
+```
+
+这个命令只做字符串替换：
+
+```text
+/images/posts/llm-transformer-rag/
+```
+
+替换为：
+
+```text
+https://luomublog.oss-cn-qingdao.aliyuncs.com/ImgHost/posts/llm-transformer-rag/
+```
+
+替换后运行：
+
+```powershell
+npm run check
+npm run images:check
+```
+
+如果 `images:check` 显示新文章 OSS URL 都是 `OK 200`，再本地预览。
+
+### 使用 PicGo 桌面版
+
+建议在阿里云创建专用 RAM 用户，只允许读写 `luomublog/ImgHost/*`，不要使用主账号 AccessKey。日常优先使用 PicGo 桌面版拖拽上传；命令行 PicGo-Core 作为可选工具按需临时安装，不长期放在博客项目依赖里。
+
+1. 安装 PicGo 桌面版。
+2. 打开 PicGo 设置 -> 图床设置 -> 阿里云 OSS。
+3. 建议填写：
+
+   ```text
+   设定 KeyId：阿里云 RAM 用户 AccessKey ID
+   设定 KeySecret：阿里云 RAM 用户 AccessKey Secret
+   设定 Bucket：luomublog
+   设定存储区域：oss-cn-qingdao
+   设定存储路径：ImgHost/posts/<english-slug>/
+   设定自定义域名：https://luomublog.oss-cn-qingdao.aliyuncs.com
+   ```
+
+4. 上传前确认 PicGo 的存储路径是否是当前文章目录，例如新大模型文章用：
+
+   ```text
+   ImgHost/posts/llm-transformer-rag/
+   ```
+
+5. 拖拽图片上传后，PicGo 会复制 Markdown 或 URL。建议用 URL 形式放入文章。
+6. 不要把 PicGo 配置文件提交到仓库；AccessKey 只能保存在本机 PicGo 配置里。
+
+### 使用 PicGo-Core 或命令行
+
+当前项目不内置 PicGo-Core 依赖，原因是 PicGo-Core 的旧依赖会带来额外 npm audit 告警。若以后需要命令行上传，可以临时执行：
 
 ```powershell
 npx picgo --version
-node tools/upload-image.mjs .\source\images\posts\example\cover.png
 ```
+
+如果要让 Codex 自动上传，需要先提供安全的本机 PicGo 配置或临时环境变量，并单独增加上传脚本。不要把阿里云 AccessKey 写入 README、Markdown、YAML、`.env` 或 Git 历史。
 
 文章图片推荐路径：
 
 - 本地备份：`source/images/posts/<english-slug>/`
 - OSS 对象：`ImgHost/posts/<english-slug>/`
-- Markdown 引用：优先使用 OSS URL；未配置 OSS 时可先使用 `/images/posts/<english-slug>/xxx.png`
+- Markdown 引用：写作阶段可先使用 `/images/posts/<english-slug>/xxx.png`；正式发布前优先改成 OSS URL
 
 不要把 PicGo 配置、AccessKey、Secret、RAM 凭据提交进仓库。每次改完配置都运行：
 
 ```powershell
 npm run check:secrets
 ```
+
+### 检查图片是否真的可访问
+
+运行：
+
+```powershell
+npm run images:check
+```
+
+它会扫描文章和主题配置中的图片链接：
+
+- `/images/...` 本地路径：检查 `source/images/...` 文件是否存在。
+- `https://luomublog.oss-cn-qingdao.aliyuncs.com/...`：检查 OSS URL 是否能返回 200。
+- 其他外链：检查是否超时、403 或 404。
+
+如果出现 `ERR 403`，通常不是 Hexo 问题，而是 OSS 对象权限、防盗链、路径大小写或对象不存在。当前排查曾发现：
+
+```text
+https://luomublog.oss-cn-qingdao.aliyuncs.com/ImgHost/中国内陆Google搜索使用/YouTube.png
+```
+
+返回 403，但本机还有备份：
+
+```text
+D:\Projects\Blog\Images\ArticlesImages\中国内陆Google搜索使用\YouTube.png
+```
+
+这类历史单图建议在 OSS 控制台重新上传，优先上传到原路径；如果原路径仍受权限影响，就上传到新的 `ImgHost/posts/<slug>/` 目录，并修改对应 Markdown 链接。
 
 ## 六、用 Codex 写博客的提示词
 
@@ -155,17 +359,130 @@ npm run check:secrets
 请查看最近一次提交和 GitHub Actions 发布记录，给出最小回滚方案。未经我确认不要执行 reset、revert 或 force push。
 ```
 
-## 七、故障排查
+## 七、依赖与安全告警策略
+
+本项目的优先级是：旧主题视觉稳定 > 构建链可维护 > 依赖尽量新。当前采用的折中版本是：
+
+- `hexo@8.1.2`
+- `hexo-theme-butterfly@4.1.0`
+- `hexo-renderer-stylus@3.0.1`
+- `hexo-bilibili-bangumi@1.11.1`
+- `hexo-renderer-marked@7.0.1`
+
+这样做的原因是：主题本体保持旧版，避免破坏多年魔改的视觉；Hexo 和部分构建插件更新到新版本，减少旧依赖带来的安全告警。
+
+如果运行：
+
+```powershell
+npm audit --omit=dev
+```
+
+仍看到少量 `moderate` 级别告警，通常来自 Butterfly 4 内部依赖的旧 stylus/source-map 解析链。这类依赖只在本机或 GitHub Actions 构建静态文件时使用，不会被发布到浏览器端作为可交互服务运行。不要直接执行：
+
+```powershell
+npm audit fix --force
+```
+
+因为它可能强制升级主题相关依赖，重新破坏旧页面结构和样式。正确处理方式是：
+
+1. 先运行 `npm run check`，确认站点能稳定生成。
+2. 再运行 `npm audit --omit=dev`，记录剩余告警。
+3. 只有当修复不升级 `hexo-theme-butterfly`、不改变页面视觉，并且本地截图验收通过时，才合并依赖改动。
+
+## 八、故障排查
 
 构建命令只显示 Hexo 帮助：检查 `package.json` 是否保留了 `"hexo": {"version": "8.1.2"}`。
 
 Windows 安装失败：删除 `node_modules` 后重新运行 `npm ci`。不要从 macOS 复制 `node_modules`。
 
-端口占用：运行 `npx hexo server -p 4001`。
+端口占用或本地服务异常：本项目默认使用 `npm run server`，实际命令是 `hexo server -p 4001 --host 127.0.0.1`。如果手动启动，使用：
+
+```powershell
+npx hexo server -p 4001 --host 127.0.0.1
+```
+
+如果页面异常，先检查 4000/4001 端口：
+
+```powershell
+Get-NetTCPConnection -LocalPort 4000 -ErrorAction SilentlyContinue | Select-Object LocalAddress,LocalPort,State,OwningProcess
+Get-NetTCPConnection -LocalPort 4001 -ErrorAction SilentlyContinue | Select-Object LocalAddress,LocalPort,State,OwningProcess
+```
+
+如果 4000 没有异常，也可以手动使用 4000；但本机排查时曾发现 PID 6816 在监听 `4000` 且拒绝停止，导致静态资源请求超时，所以 README 默认推荐 4001，减少和桌面软件冲突的概率。
+
+图片一直显示小圆点或 `loading3.gif`：这是懒加载占位图没有被替换成真实图片。处理顺序：
+
+```powershell
+cd D:\Projects\Blog\guojx0820.github.io
+npm run clean
+npm run check
+npm run server
+```
+
+然后访问 `http://127.0.0.1:4001/`，并用浏览器强制刷新：
+
+- Edge/Chrome：`Ctrl + F5`
+- 或打开开发者工具，Network 勾选 Disable cache 后刷新
+
+本项目保留懒加载，不关闭懒加载。`source/js/lazyload-fallback.js` 是本地兜底脚本：当 Butterfly/hexo-lazyload-image 的默认懒加载初始化慢、CDN 不稳定或浏览器缓存异常时，它会在图片接近视口时把 `data-original` 中的真实图片地址切换到 `src`。
+
+判断图片问题属于哪一类：
+
+- 如果 `src` 是 `loading3.gif`，真实地址在 `data-original`，说明图片进入了懒加载流程。
+- 如果 OSS URL 单独打开正常，但页面里一直是 `loading3.gif`，优先强制刷新并检查懒加载脚本。
+- 如果 `/images/posts/...` 本地地址打不开，检查是否运行了 `npm run server`，以及是否访问 `127.0.0.1:4001`。
+- 如果正式网站上的 GitHub 本地图片慢，按上面的 OSS 流程上传并替换为 OSS URL。
+
+单独验证图片地址：
+
+```powershell
+Invoke-WebRequest -Uri "https://luomublog.oss-cn-qingdao.aliyuncs.com/ImgHost/CNN/DNN_top.jpeg" -Method Head -TimeoutSec 12
+Invoke-WebRequest -Uri "http://127.0.0.1:4001/images/posts/llm-transformer-rag/cover.png" -Method Get -TimeoutSec 20
+```
+
+如果 OSS 图片 403/404，检查 Bucket 公共读、防盗链白名单、对象路径大小写和 RAM 权限。如果只有本地 `/images/...` 卡住，优先重启 Hexo server 并确认使用 4001。
 
 文章 URL 变化：检查文章 front matter 中的 `abbrlink` 是否被删除或改动。
 
-公式不显示：确认文章 front matter 有 `mathjax: true`，并且 `_config.butterfly.yml` 里 `mathjax.enable` 为 `true`。
+公式不显示或显示成 Markdown 原文：先确认文章 front matter 有 `mathjax: true`，并且 `_config.butterfly.yml` 里 `mathjax.enable` 为 `true`、`katex.enable` 为 `false`。这个旧主题使用 Butterfly 4 的 MathJax 兼容逻辑，行内公式可继续写 `$Q$`、`$K$`、`$\sqrt{d_k}$`；块级公式为了避免 Hexo/marked 把 `$$` 或 `\[` 误处理，推荐写成：
+
+```markdown
+<script type="math/tex; mode=display">
+\operatorname{Attention}(Q,K,V)=\operatorname{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
+</script>
+```
+
+不要把公式包进代码块，也不要在公式上下紧贴正文。如果你看到页面里出现 `$$` 原文、青绿色代码块、或者孤立的 `[` `]`，通常就是 Markdown 渲染器先于 MathJax 把块级公式处理坏了。修改后运行：
+
+```powershell
+npm run clean
+npm run check
+npm run server
+```
+
+然后打开文章页检查。如果页面仍显示 `$$`、`\[`、`[` `]` 等原文，按 `Ctrl + F5` 强制刷新；如果浏览器控制台显示 MathJax CDN 加载失败，再检查网络或将 MathJax CDN 本地化。
+
+页脚红心不显示：旧站版权行应接近：
+
+```html
+&copy;2021 - 2026 <i id="heartbeat" class="fa fas fa-heartbeat"></i> 洛沐
+```
+
+本仓库通过 `/js/footer-heartbeat.js` 把 Butterfly 默认输出的 `By 洛沐` 改回旧站红心格式，通过 `/css/heartbeat.css` 提供跳动动画。如果红心不跳，检查：
+
+1. `_config.butterfly.yml` 的 `inject.head` 是否包含 `/css/heartbeat.css`。
+2. `_config.butterfly.yml` 的 `inject.bottom` 是否包含 `/js/footer-heartbeat.js`。
+3. `/css/font-awesome.min.css` 是否正常加载，红心图标依赖 FontAwesome 兼容类。
+4. 修改后是否重新运行 `npm run clean && npm run check` 并重启 `npm run server`。
+
+发布前必须先本地检查底部页脚和公式页，确认无误后再手动提交/推送：
+
+```powershell
+git status
+git add .
+git commit -m "Restore footer heartbeat and fix MathJax rendering"
+git push origin main
+```
 
 OSS 图片 403：检查 Bucket 公共读、防盗链白名单、对象路径大小写和 RAM 权限。
 
@@ -173,7 +490,7 @@ Pages 没更新：查看 GitHub Actions 是否失败；查看 Settings -> Pages 
 
 自定义域名异常：确认 GitHub Pages Custom domain 是 `www.guojxblog.cn`，HTTPS 已启用；只有 GitHub 检查失败时再改阿里云 DNS。
 
-## 八、安全与恢复
+## 九、安全与恢复
 
 - 旧 GitHub Token 必须撤销。
 - 新仓库不要保存任何 token、password、AccessKey、Secret。
@@ -181,7 +498,7 @@ Pages 没更新：查看 GitHub Actions 是否失败；查看 Settings -> Pages 
 - 离线恢复可使用 `D:\Projects\Blog\_migration_backup_20260902-170134`。
 - 旧 `master` 分支暂时保留，可以作为迁移失败时的静态站点回滚参考。
 
-## 九、一页速查
+## 十、一页速查
 
 ```powershell
 cd D:\Projects\Blog\guojx0820.github.io

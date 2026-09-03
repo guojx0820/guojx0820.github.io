@@ -1,0 +1,6 @@
+/*
+ * 旧 Butterfly 4 配置会加载 /css/font-awesome.min.css。
+ * 当前仓库使用本地 vendor 资源提供兼容，避免依赖 jsDelivr 等外部 CDN。
+ */
+@import url('/vendor/fontawesome/css/all.min.css');
+@import url('/vendor/fontawesome/css/v4-shims.min.css');
