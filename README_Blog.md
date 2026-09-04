@@ -111,6 +111,17 @@ master = 旧 Mac 时代生成出来的静态网页分支，里面是 about、arc
 
 如果 Pages 还指向 `master`，即使 `main` 已经成功推送，`www.guojxblog.cn` 也仍然会显示 2023 年旧网页。这就是“main 已更新、master 没变、网站没变”的根本原因。
 
+本次排查的实际状态就是：
+
+```text
+origin/main   = 已更新到新提交
+origin/master = 仍停留在 2023 年旧静态站点
+Actions build = 成功
+Actions deploy = 失败
+```
+
+这说明博客源码、依赖安装、Hexo 构建都已经没问题；最后失败在 GitHub Pages 部署环节。优先检查 Settings -> Pages 是否仍是从 `master` 分支部署。
+
 ### 在 GitHub 网页上切换 Pages 到 GitHub Actions
 
 这一步需要你在浏览器登录 GitHub 后手动点一次：
@@ -139,6 +150,33 @@ master = 旧 Mac 时代生成出来的静态网页分支，里面是 about、arc
 5. 确认 `Update`。
 
 注意：这只是让 GitHub 网页默认展示 `main`，不等于 Pages 发布设置。真正决定 `www.guojxblog.cn` 是否更新的是 Settings -> Pages -> Source。
+
+### Actions 红色失败时怎么判断
+
+打开失败的 Actions 后，不要慌，按步骤看：
+
+1. 点 GitHub 顶部 `Actions`。
+2. 左侧点 `Deploy Hexo site to Pages`。
+3. 点最新一条红色记录。
+4. 页面里通常有两个 job：
+   - `build`
+   - `deploy`
+5. 如果 `build` 是绿色，说明源码能正常构建。
+6. 如果 `deploy` 是红色，通常是 Pages 设置或 Pages 权限问题。
+7. 这时优先去 `Settings -> Pages`，把 Source 改成 `GitHub Actions`。
+8. 改完后回到 Actions，点 `Run workflow` 手动重跑一次。
+
+如果 `build` 失败，把失败步骤展开，常见原因如下：
+
+```text
+Install dependencies 失败 = npm ci 或 package-lock 问题
+Validate source 失败    = 密钥扫描或 abbrlink 检查失败
+Build 失败              = Hexo 配置、文章格式、主题兼容问题
+Upload artifact 失败    = public 目录生成异常
+Deploy 失败             = GitHub Pages 设置/权限问题
+```
+
+本仓库 workflow 使用 Node.js 20 LTS，与本机 README 推荐版本一致。不要随意改成过新的 Node 版本，旧 Butterfly 4 主题更适合保守稳定运行。
 
 本机已经安装 GitHub Desktop 时，优先使用 GitHub Desktop 发布，不强制安装 GitHub CLI：
 
