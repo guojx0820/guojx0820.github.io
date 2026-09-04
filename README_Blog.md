@@ -84,6 +84,62 @@ dir package.json
 2. 在 `guojx0820.github.io` 仓库 Settings -> Pages 中，把 Source 改成 GitHub Actions。
 3. 在 Pages 的 Custom domain 填入 `www.guojxblog.cn`，并开启 Enforce HTTPS。
 
+### main、master 和网站为什么不一致
+
+这个仓库现在有两个分支，它们的作用不同：
+
+```text
+main   = 新电脑上的 Hexo 源码分支，里面有 package.json、source、themes、.github/workflows 等文件
+master = 旧 Mac 时代生成出来的静态网页分支，里面是 about、archives、css、js、img 等最终网页文件
+```
+
+你在 GitHub Code 页看到 `master` 仍然停留在 2023 年，这是正常现象。因为我们不再把 Hexo 生成后的 `public` 文件手动推到 `master`。新的推荐发布方式是：
+
+```text
+本机 main 源码
+  -> git push origin main
+  -> GitHub Actions 自动 npm ci / hexo generate
+  -> Actions 把 public 发布到 GitHub Pages
+  -> www.guojxblog.cn 更新
+```
+
+所以判断是否上传成功，不要只看 `master` 文件列表，而要看这三个地方：
+
+1. GitHub 仓库 Code 页左上角分支切换到 `main`，确认能看到最新 commit。
+2. GitHub 仓库 Actions 页，确认 `Deploy Hexo site to Pages` 是否绿色成功。
+3. GitHub 仓库 Settings -> Pages，确认 Source 是 `GitHub Actions`，不是 `Deploy from a branch` 的 `master`。
+
+如果 Pages 还指向 `master`，即使 `main` 已经成功推送，`www.guojxblog.cn` 也仍然会显示 2023 年旧网页。这就是“main 已更新、master 没变、网站没变”的根本原因。
+
+### 在 GitHub 网页上切换 Pages 到 GitHub Actions
+
+这一步需要你在浏览器登录 GitHub 后手动点一次：
+
+1. 打开仓库：`https://github.com/guojx0820/guojx0820.github.io`
+2. 点顶部 `Settings`。
+3. 左侧找到 `Pages`。
+4. 找到 `Build and deployment`。
+5. `Source` 下拉框选择 `GitHub Actions`。
+6. `Custom domain` 填 `www.guojxblog.cn`。
+7. 勾选或等待出现 `Enforce HTTPS`。
+8. 回到顶部 `Actions`。
+9. 点击左侧 `Deploy Hexo site to Pages`。
+10. 如果右侧有 `Run workflow`，选择 `main` 后手动运行一次。
+11. 等待 workflow 变成绿色对勾。
+12. 打开 `https://www.guojxblog.cn/`，按 `Ctrl + F5` 强制刷新。
+
+可选但推荐：把 GitHub 仓库默认分支也改成 `main`。这样你每次打开 Code 页默认看到的就是源码分支，不会被旧 `master` 误导。
+
+操作路径：
+
+1. 仓库 `Settings`。
+2. 左侧 `Branches`。
+3. `Default branch` 点切换按钮。
+4. 选择 `main`。
+5. 确认 `Update`。
+
+注意：这只是让 GitHub 网页默认展示 `main`，不等于 Pages 发布设置。真正决定 `www.guojxblog.cn` 是否更新的是 Settings -> Pages -> Source。
+
 本机已经安装 GitHub Desktop 时，优先使用 GitHub Desktop 发布，不强制安装 GitHub CLI：
 
 1. 打开 GitHub Desktop。
@@ -143,6 +199,15 @@ git push origin main
 4. `git remote -v`：确认远端是 `https://github.com/guojx0820/guojx0820.github.io.git` 或已配置好的 SSH 地址。
 5. `git ls-remote origin`：先测试和 GitHub 的连接与证书是否正常。
 6. `git push origin main`：把 `main` 分支推到 GitHub，由 GitHub Actions 自动发布 Pages。
+
+推送后继续检查：
+
+1. 打开 `https://github.com/guojx0820/guojx0820.github.io`。
+2. 左上角分支切换到 `main`。
+3. 确认最新提交说明与你刚才 commit 的说明一致。
+4. 打开 Actions 页，等待 `Deploy Hexo site to Pages` 变成绿色。
+5. 如果 Actions 是红色，点进去看失败日志；通常优先看 `Install dependencies`、`Validate source`、`Build`、`Deploy to GitHub Pages` 哪一步红了。
+6. Actions 绿色后，再打开 `https://www.guojxblog.cn/` 和具体文章链接。
 
 ### Git 推送证书错误：SEC_E_UNTRUSTED_ROOT
 
@@ -331,6 +396,183 @@ git push origin main
 ```
 
 GitHub Actions 成功后，访问 `https://www.guojxblog.cn/archives/<abbrlink>.html` 验证最终页面。
+
+### 手动发布一篇文章：完整新手流程
+
+下面以“我要写一篇新文章”为例，完整走一遍。
+
+第一步，进入项目目录：
+
+```powershell
+cd D:\Projects\Blog\guojx0820.github.io
+```
+
+第二步，新建文章：
+
+```powershell
+npm run new:post -- "我的新文章标题"
+```
+
+Hexo 会在 `source/_posts/` 下生成一个 Markdown 文件。打开它，检查文件开头的 front matter：
+
+```yaml
+---
+title: 我的新文章标题
+tags:
+  - 标签
+categories: 分类
+description: 一句话摘要
+cover: https://luomublog.oss-cn-qingdao.aliyuncs.com/ImgHost/xxx/cover.jpg
+abbrlink: 自动生成或固定短链接
+date: 2026-09-04 20:00:00
+---
+```
+
+第三步，写正文。正文就是 Markdown：
+
+```markdown
+# 一级标题
+
+这是一段正文。
+
+![图片说明](https://luomublog.oss-cn-qingdao.aliyuncs.com/ImgHost/xxx/image.png)
+```
+
+第四步，处理图片：
+
+1. 先把图片整理到一个本地文件夹。
+2. 用 PicGo 或阿里云 OSS 控制台上传到 `luomublog/ImgHost/<文章英文目录>/`。
+3. 复制 OSS 公开访问地址。
+4. 把 Markdown 里的图片地址替换成 OSS 地址。
+5. 正式发布前尽量不要长期使用 `/images/posts/...` 这种 GitHub 本地图片路径。
+
+第五步，本地检查：
+
+```powershell
+npm run check
+```
+
+第六步，本地预览：
+
+```powershell
+npm run server
+```
+
+浏览器打开：
+
+```text
+http://127.0.0.1:4001/
+```
+
+重点检查：
+
+1. 首页有没有新文章。
+2. 文章封面是否正常。
+3. 正文图片是否正常。
+4. 公式、代码块、目录是否正常。
+5. 页脚红心、左侧栏、Live2D、背景是否仍保持旧站风格。
+
+第七步，提交：
+
+```powershell
+git status
+git add .
+git commit -m "Add article: 我的新文章标题"
+```
+
+第八步，推送：
+
+```powershell
+git push origin main
+```
+
+第九步，看 GitHub Actions：
+
+1. 打开仓库 Actions 页。
+2. 点最新一次 `Deploy Hexo site to Pages`。
+3. 等它变成绿色。
+4. 如果失败，复制红色失败步骤给 Codex 分析。
+
+第十步，看正式网站：
+
+```text
+https://www.guojxblog.cn/
+https://www.guojxblog.cn/archives/<abbrlink>.html
+```
+
+如果网站十几分钟仍没变化：
+
+1. 确认你看的是 `main` 最新 commit，不是 `master`。
+2. 确认 Settings -> Pages -> Source 是 `GitHub Actions`。
+3. 确认 Actions 是绿色成功。
+4. 用无痕窗口打开网站。
+5. 按 `Ctrl + F5` 强制刷新。
+
+### 让 Codex 代理更新文章：推荐工作方式
+
+Codex 可以代你写文章、改 Markdown、检查构建、提交、推送，但建议分成几个明确阶段，避免它误改主题。
+
+阶段 1：只写草稿，不提交不推送
+
+```text
+请在当前 Hexo 博客中写一篇新文章《标题》。
+要求：
+1. 保持旧 Butterfly 4 主题和所有美化风格不变。
+2. 只新增或修改 source/_posts 下的文章文件。
+3. 图片先使用我提供的 OSS 地址；如果没有 OSS 地址，先用占位说明，不要乱找图。
+4. 保留 front matter，分类为“程序代码”，标签为“深度学习、Python”。
+5. 写完后运行 npm run check。
+6. 不要 git commit，不要 git push。
+```
+
+阶段 2：让 Codex 帮你检查本地页面
+
+```text
+请检查刚写的新文章：
+1. 运行 npm run check。
+2. 启动 npm run server。
+3. 打开 http://127.0.0.1:4001/ 和新文章页。
+4. 检查图片、公式、代码块、目录、页脚红心是否正常。
+5. 不要修改主题，不要提交，不要推送。
+```
+
+阶段 3：你确认页面满意后，让 Codex 提交
+
+```text
+本地预览我已确认满意。
+请只提交本次文章相关修改：
+1. 运行 git status。
+2. 说明将提交哪些文件。
+3. 运行 npm run check。
+4. git add 本次相关文件。
+5. git commit -m "Add article: 标题"。
+6. 暂时不要 push，等我确认。
+```
+
+阶段 4：你确认提交无误后，让 Codex 推送
+
+```text
+可以推送到 GitHub。
+请执行：
+1. git push origin main。
+2. 如果失败，保留错误原文并分析原因。
+3. 不要改 master。
+4. 不要关闭 SSL 校验。
+```
+
+阶段 5：发布失败时让 Codex 排查
+
+```text
+网站没有更新，请排查：
+1. git log --oneline -5。
+2. git branch -vv。
+3. git remote -v。
+4. 检查 .github/workflows/pages.yml。
+5. 说明 GitHub Pages 应该设置为 GitHub Actions 还是 master。
+6. 不要改主题，不要 force push。
+```
+
+最重要的规则：以后凡是涉及 UI、主题、卡片、背景、侧边栏、Live2D、页脚、字体、颜色、透明度的修改，都必须先明确告诉 Codex“允许改主题风格”。否则默认不允许改。
 
 ## 五、图片、阿里云 OSS 与 PicGo
 
@@ -673,6 +915,31 @@ npm run server
 2. `_config.butterfly.yml` 的 `inject.bottom` 是否包含 `/js/footer-heartbeat.js`。
 3. `/css/font-awesome.min.css` 是否正常加载，红心图标依赖 FontAwesome 兼容类。
 4. 修改后是否重新运行 `npm run clean && npm run check` 并重启 `npm run server`。
+
+关于页 GitHub 统计图显示破图：关于页原来使用过 `github-readme-stats.vercel.app` 的动态图片，例如：
+
+```markdown
+![GitHub 数据统计](https://github-readme-stats.vercel.app/api?username=guojx0820&show_icons=true&theme=radical)
+```
+
+这个服务不是博客本身的一部分，它依赖 Vercel 和 GitHub API。国内网络、Vercel 访问、GitHub API 限流或浏览器插件都可能导致它加载失败。现象就是关于页出现一个破图图标，下面仍能看到图片 alt 文字。
+
+处理原则：
+
+1. 不为这个外部统计卡片修改主题。
+2. 不因为一个第三方图片失败就升级 Butterfly。
+3. 优先保证页面稳定显示，不出现破图。
+4. 如果以后想恢复动态统计图，先在浏览器单独打开 `https://github-readme-stats.vercel.app/api?username=guojx0820&show_icons=true&theme=radical`，确认能稳定访问后再放回 Markdown。
+
+当前稳定写法是使用文字链接：
+
+```markdown
+GitHub 数据统计：[查看洛沐的 GitHub 主页](https://github.com/guojx0820)
+
+GitHub 编程语言统计：[查看洛沐的 GitHub 仓库](https://github.com/guojx0820?tab=repositories)
+```
+
+这样即使第三方统计服务不可用，关于页也不会出现破图。
 
 发布前必须先本地检查底部页脚和公式页，确认无误后再手动提交/推送：
 
