@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="RF-DETR detection example">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bfeaff"/><stop offset=".62" stop-color="#edf8ff"/><stop offset="1" stop-color="#d9f2d3"/></linearGradient>
+  </defs>
+  <rect width="1280" height="720" fill="url(#sky)"/>
+  <rect x="0" y="520" width="1280" height="200" fill="#b7df99"/>
+  <path d="M0 515C150 468 250 560 394 505C560 442 720 560 900 490C1050 432 1160 496 1280 456V720H0z" fill="#91c979"/>
+  <circle cx="1035" cy="145" r="60" fill="#ffe17a" opacity=".9"/>
+  <g>
+    <rect x="160" y="350" width="210" height="170" rx="55" fill="#d99b57"/>
+    <circle cx="210" cy="305" r="58" fill="#e5b170"/>
+    <circle cx="320" cy="305" r="58" fill="#e5b170"/>
+    <circle cx="235" cy="318" r="9" fill="#2e2624"/>
+    <circle cx="308" cy="318" r="9" fill="#2e2624"/>
+    <ellipse cx="270" cy="355" rx="35" ry="24" fill="#f0cfaa"/>
+    <circle cx="270" cy="348" r="9" fill="#36231b"/>
+    <rect x="198" y="500" width="38" height="92" rx="18" fill="#8a5b31"/>
+    <rect x="295" y="500" width="38" height="92" rx="18" fill="#8a5b31"/>
+  </g>
+  <g>
+    <rect x="585" y="260" width="260" height="250" rx="35" fill="#52697a"/>
+    <circle cx="640" cy="235" r="52" fill="#6d8494"/>
+    <circle cx="785" cy="235" r="52" fill="#6d8494"/>
+    <path d="M610 500L565 600H625L690 500z" fill="#415464"/>
+    <path d="M775 500L850 600H910L830 500z" fill="#415464"/>
+    <circle cx="675" cy="300" r="10" fill="#1c2930"/>
+    <circle cx="760" cy="300" r="10" fill="#1c2930"/>
+    <path d="M692 360Q720 390 750 360" fill="none" stroke="#1c2930" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <g>
+    <rect x="938" y="398" width="180" height="70" rx="12" fill="#ed5e42"/>
+    <rect x="1085" y="360" width="80" height="108" rx="8" fill="#e94535"/>
+    <circle cx="982" cy="482" r="30" fill="#242b33"/>
+    <circle cx="1113" cy="482" r="30" fill="#242b33"/>
+    <rect x="1088" y="378" width="58" height="42" rx="6" fill="#bfeaff"/>
+  </g>
+  <g fill="none" stroke-width="6" font-family="Segoe UI, Arial">
+    <rect x="142" y="236" width="250" height="370" rx="12" stroke="#00d084"/>
+    <text x="156" y="224" fill="#00a86b" font-size="28" font-weight="700">dog 0.94</text>
+    <rect x="548" y="176" width="340" height="440" rx="12" stroke="#2f8cff"/>
+    <text x="562" y="164" fill="#1f6fd1" font-size="28" font-weight="700">bear 0.91</text>
+    <rect x="928" y="348" width="250" height="170" rx="12" stroke="#ff9e2c"/>
+    <text x="942" y="336" fill="#d97706" font-size="28" font-weight="700">car 0.88</text>
+  </g>
+  <text x="640" y="676" text-anchor="middle" fill="#1a4055" font-size="26" font-family="Microsoft YaHei, Segoe UI, Arial">示意图：目标检测输出的是“类别 + 位置 + 置信度”</text>
+</svg>

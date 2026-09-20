@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-label="DETR versus RF-DETR flow">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fffaf1"/><stop offset="1" stop-color="#eef8ff"/></linearGradient>
+    <marker id="a1" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#6a7b8a"/></marker>
+    <marker id="a2" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#009e8d"/></marker>
+  </defs>
+  <rect width="1280" height="760" fill="url(#bg)"/>
+  <text x="640" y="64" text-anchor="middle" font-size="40" font-weight="800" fill="#233648" font-family="Microsoft YaHei, Segoe UI, Arial">从传统检测到 RF-DETR：思路的变化</text>
+  <g font-family="Microsoft YaHei, Segoe UI, Arial">
+    <rect x="70" y="130" width="1140" height="245" rx="28" fill="#ffffff" stroke="#c7d7e5" stroke-width="2"/>
+    <text x="120" y="180" font-size="30" font-weight="800" fill="#526270">传统密集检测</text>
+    <g fill="#f7f9fb" stroke="#b8c5d0" stroke-width="2">
+      <rect x="110" y="225" width="170" height="82" rx="18"/><rect x="365" y="225" width="170" height="82" rx="18"/><rect x="620" y="225" width="170" height="82" rx="18"/><rect x="875" y="225" width="230" height="82" rx="18"/>
+    </g>
+    <text x="195" y="276" text-anchor="middle" font-size="24" fill="#394b59">图像特征</text>
+    <text x="450" y="260" text-anchor="middle" font-size="22" fill="#394b59">大量锚框 / 网格点</text>
+    <text x="450" y="291" text-anchor="middle" font-size="20" fill="#6d7d89">many-to-one</text>
+    <text x="705" y="276" text-anchor="middle" font-size="24" fill="#394b59">分类 + 回归</text>
+    <text x="990" y="260" text-anchor="middle" font-size="22" fill="#394b59">NMS 后处理</text>
+    <text x="990" y="291" text-anchor="middle" font-size="20" fill="#6d7d89">去掉重复框</text>
+    <g stroke="#6a7b8a" stroke-width="4" marker-end="url(#a1)"><path d="M280 266H365"/><path d="M535 266H620"/><path d="M790 266H875"/></g>
+    <text x="120" y="342" font-size="20" fill="#7a5a5a">优点：速度快、工程成熟；难点：候选框、正负样本、NMS 等规则较多。</text>
+
+    <rect x="70" y="430" width="1140" height="245" rx="28" fill="#f2fffd" stroke="#79d7cc" stroke-width="3"/>
+    <text x="120" y="480" font-size="30" font-weight="800" fill="#007e74">RF-DETR 端到端检测</text>
+    <g fill="#ffffff" stroke="#69cfc5" stroke-width="2">
+      <rect x="110" y="525" width="170" height="82" rx="18"/><rect x="365" y="525" width="170" height="82" rx="18"/><rect x="620" y="525" width="170" height="82" rx="18"/><rect x="875" y="525" width="230" height="82" rx="18"/>
+    </g>
+    <text x="195" y="576" text-anchor="middle" font-size="24" fill="#06433f">DINOv2 特征</text>
+    <text x="450" y="560" text-anchor="middle" font-size="22" fill="#06433f">Object Queries</text>
+    <text x="450" y="591" text-anchor="middle" font-size="20" fill="#43706c">每个查询像一个“找目标的人”</text>
+    <text x="705" y="576" text-anchor="middle" font-size="24" fill="#06433f">一对一匹配训练</text>
+    <text x="990" y="560" text-anchor="middle" font-size="22" fill="#06433f">直接输出目标集合</text>
+    <text x="990" y="591" text-anchor="middle" font-size="20" fill="#43706c">减少规则化后处理</text>
+    <g stroke="#009e8d" stroke-width="4" marker-end="url(#a2)"><path d="M280 566H365"/><path d="M535 566H620"/><path d="M790 566H875"/></g>
+    <text x="120" y="642" font-size="20" fill="#236960">优点：结构更统一，框架更简洁；RF-DETR 的关键是把 DETR 做到实时可用。</text>
+  </g>
+</svg>

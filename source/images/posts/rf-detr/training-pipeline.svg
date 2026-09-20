@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="760" viewBox="0 0 1280 760" role="img" aria-label="RF-DETR training pipeline">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f5f8ff"/><stop offset="1" stop-color="#fff6f6"/></linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L0,6 L9,3 z" fill="#425a7a"/></marker>
+  </defs>
+  <rect width="1280" height="760" fill="url(#bg)"/>
+  <text x="640" y="70" text-anchor="middle" font-size="42" font-weight="800" fill="#25334d" font-family="Microsoft YaHei, Segoe UI, Arial">RF-DETR 微调训练流程</text>
+  <g font-family="Microsoft YaHei, Segoe UI, Arial">
+    <g fill="#fff" stroke="#b9c7dd" stroke-width="2">
+      <rect x="70" y="160" width="210" height="120" rx="24"/>
+      <rect x="335" y="160" width="210" height="120" rx="24"/>
+      <rect x="600" y="160" width="210" height="120" rx="24"/>
+      <rect x="865" y="160" width="250" height="120" rx="24"/>
+    </g>
+    <text x="175" y="210" text-anchor="middle" font-size="26" font-weight="800" fill="#20334a">采集数据</text>
+    <text x="175" y="248" text-anchor="middle" font-size="19" fill="#5c6b7b">真实业务图片</text>
+    <text x="440" y="210" text-anchor="middle" font-size="26" font-weight="800" fill="#20334a">标注目标框</text>
+    <text x="440" y="248" text-anchor="middle" font-size="19" fill="#5c6b7b">Roboflow / Labelme / CVAT</text>
+    <text x="705" y="210" text-anchor="middle" font-size="26" font-weight="800" fill="#20334a">COCO 格式</text>
+    <text x="705" y="248" text-anchor="middle" font-size="19" fill="#5c6b7b">train / valid / test</text>
+    <text x="990" y="210" text-anchor="middle" font-size="26" font-weight="800" fill="#20334a">加载预训练模型</text>
+    <text x="990" y="248" text-anchor="middle" font-size="19" fill="#5c6b7b">RFDETRBase / RFDETRLarge</text>
+    <g stroke="#425a7a" stroke-width="4" fill="none" marker-end="url(#arrow)">
+      <path d="M280 220H335"/><path d="M545 220H600"/><path d="M810 220H865"/>
+      <path d="M990 280C990 350 815 350 760 405"/>
+    </g>
+    <rect x="300" y="405" width="680" height="150" rx="30" fill="#ffffff" stroke="#ff8d81" stroke-width="3"/>
+    <text x="640" y="462" text-anchor="middle" font-size="30" font-weight="800" fill="#6b2f2b">训练与验证</text>
+    <text x="640" y="508" text-anchor="middle" font-size="21" fill="#704b47">设置 epochs / batch_size / grad_accum_steps / lr / resolution</text>
+    <text x="640" y="540" text-anchor="middle" font-size="21" fill="#704b47">观察 mAP、loss、漏检、误检和小目标表现</text>
+    <g stroke="#425a7a" stroke-width="4" fill="none" marker-end="url(#arrow)">
+      <path d="M640 555V615"/>
+    </g>
+    <rect x="430" y="615" width="420" height="86" rx="24" fill="#ecfff5" stroke="#32bf76" stroke-width="3"/>
+    <text x="640" y="652" text-anchor="middle" font-size="25" font-weight="800" fill="#155c38">导出与部署</text>
+    <text x="640" y="684" text-anchor="middle" font-size="19" fill="#3f7159">ONNX / TensorRT / 本地服务 / 边缘设备</text>
+  </g>
+</svg>

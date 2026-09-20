@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" role="img" aria-label="RF-DETR cover">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07111f"/>
+      <stop offset=".52" stop-color="#12385d"/>
+      <stop offset="1" stop-color="#0fc1b7"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="72%" cy="36%" r="54%">
+      <stop offset="0" stop-color="#9dfcff" stop-opacity=".52"/>
+      <stop offset=".48" stop-color="#4dd8ff" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#00101d" flood-opacity=".45"/>
+    </filter>
+  </defs>
+  <rect width="1280" height="720" fill="url(#bg)"/>
+  <rect width="1280" height="720" fill="url(#glow)"/>
+  <g opacity=".18" stroke="#b8f7ff" stroke-width="1">
+    <path d="M0 110H1280M0 220H1280M0 330H1280M0 440H1280M0 550H1280M0 660H1280"/>
+    <path d="M120 0V720M260 0V720M400 0V720M540 0V720M680 0V720M820 0V720M960 0V720M1100 0V720"/>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="88" y="108" width="506" height="414" rx="28" fill="#ffffff" opacity=".12" stroke="#d7feff" stroke-opacity=".32"/>
+    <rect x="128" y="156" width="422" height="268" rx="18" fill="#061321" stroke="#8df4ff" stroke-width="3"/>
+    <rect x="182" y="215" width="154" height="120" rx="10" fill="none" stroke="#00ffd0" stroke-width="5"/>
+    <text x="194" y="205" fill="#00ffd0" font-size="24" font-family="Segoe UI, Arial">person 0.96</text>
+    <rect x="353" y="187" width="116" height="92" rx="10" fill="none" stroke="#ffcc4d" stroke-width="5"/>
+    <text x="360" y="178" fill="#ffcc4d" font-size="22" font-family="Segoe UI, Arial">dog 0.91</text>
+    <circle cx="458" cy="350" r="42" fill="none" stroke="#ff6b7a" stroke-width="5"/>
+    <text x="408" y="413" fill="#ffb8c0" font-size="22" font-family="Segoe UI, Arial">ball 0.88</text>
+  </g>
+  <g transform="translate(660 122)" filter="url(#shadow)">
+    <rect x="0" y="0" width="500" height="420" rx="30" fill="#03101d" opacity=".72" stroke="#8ffcff" stroke-opacity=".3"/>
+    <text x="40" y="92" fill="#ffffff" font-size="78" font-weight="800" font-family="Segoe UI, Arial">RF-DETR</text>
+    <text x="43" y="146" fill="#9ffcff" font-size="28" font-family="Segoe UI, Arial">Real-Time Detection Transformer</text>
+    <g transform="translate(44 200)">
+      <rect x="0" y="0" width="128" height="58" rx="16" fill="#00d4bb" opacity=".95"/>
+      <rect x="154" y="0" width="128" height="58" rx="16" fill="#3da7ff" opacity=".95"/>
+      <rect x="308" y="0" width="128" height="58" rx="16" fill="#ffc64d" opacity=".95"/>
+      <text x="30" y="38" fill="#04212d" font-size="24" font-weight="700" font-family="Segoe UI, Arial">DINOv2</text>
+      <text x="183" y="38" fill="#06172a" font-size="24" font-weight="700" font-family="Segoe UI, Arial">DETR</text>
+      <text x="332" y="38" fill="#261803" font-size="24" font-weight="700" font-family="Segoe UI, Arial">实时</text>
+      <path d="M128 29H154M282 29H308" stroke="#eaffff" stroke-width="4" marker-end="url(#arrow)"/>
+    </g>
+    <text x="44" y="334" fill="#d8f7ff" font-size="27" font-family="Microsoft YaHei, Segoe UI, Arial">把目标检测从“密集候选框”</text>
+    <text x="44" y="378" fill="#d8f7ff" font-size="27" font-family="Microsoft YaHei, Segoe UI, Arial">推进到“端到端集合预测”</text>
+  </g>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#eaffff"/>
+    </marker>
+  </defs>
+</svg>
