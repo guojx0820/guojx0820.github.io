@@ -1015,3 +1015,225 @@ git add .
 git commit -m "Add article: 标题"
 git push origin main
 ```
+
+## 十一、软件页面与 RF-DETR 缺陷检测平台发布流程
+
+本博客现在有一个独立的软件页面：
+
+```text
+https://www.guojxblog.cn/software/
+```
+
+本节用于发布 `D:\Projects\LVM\defect_lvm_detector\software` 中的 RF-DETR 缺陷检测平台 Windows 用户版。
+
+### 11.1 发布原则
+
+软件发布和普通文章发布不一样。必须遵守以下原则：
+
+1. 博客仓库只保存软件介绍页面、轻量 SVG 图片和下载链接。
+2. 不把 `.exe`、`.zip`、`.pth`、`.onnx`、`.engine` 等大型文件提交到博客仓库。
+3. 前端源码、Go 后端源码不公开；发布包只包含 Tauri 桌面 exe、Go 后端 exe、必要配置、Python Worker、脚本和 README。
+4. Python 算法环境使用 `.venv`，不默认使用 Docker。
+5. 模型权重单独作为 GitHub Release 资产或阿里云 OSS 文件提供下载。
+
+这样做的原因是：博客仓库用于构建静态网站，二进制软件和模型权重用于下载分发。把二者混在一个 Git 历史里，会导致仓库变大、Actions 变慢、后续维护困难。
+
+### 11.2 本机已生成的软件包位置
+
+当前用户版发布包目录：
+
+```text
+D:\Projects\LVM\defect_lvm_detector\software\release\VisionPlatform_RFDETR_Windows_x64_v0.1.0_20261008
+```
+
+当前 ZIP 文件：
+
+```text
+D:\Projects\LVM\defect_lvm_detector\software\release\VisionPlatform_RFDETR_Windows_x64_v0.1.0.zip
+```
+
+这个 ZIP 不包含模型权重。模型权重在：
+
+```text
+D:\Projects\LVM\defect_lvm_detector\weights\rf-detr\
+  rf-detr-nano.pth
+  rf-detr-medium.pth
+  rf-detr-large.pth
+```
+
+### 11.3 软件包目录说明
+
+ZIP 解压后结构大致如下：
+
+```text
+VisionPlatform_RFDETR_Windows_x64_v0.1.0_20261008/
+  app/
+    Vision Platform.exe
+  software/
+    go-core/
+      vision-core.exe
+    workers/
+      rfdetr/
+  scripts/
+  tools/
+  configs/
+  models/
+  datasets/
+  outputs/
+  requirements-gpu.txt
+  README.md
+  启动 RF-DETR 缺陷检测平台.bat
+  启动 RF-DETR 缺陷检测平台.ps1
+  配置 Python 算法环境.bat
+  配置 Python 算法环境.ps1
+  下载模型权重.bat
+  下载模型权重.ps1
+```
+
+其中 `app\Vision Platform.exe` 才是真正的软件本体。根目录里的 bat/ps1 只是为了让外部用户更容易启动后端、配置 `.venv` 和下载权重。
+
+### 11.4 为什么包里仍然有 Python Worker 和脚本
+
+Go 后端在 local 模式下会调用：
+
+```text
+项目根目录\.venv\Scripts\python.exe
+项目根目录\software\workers\rfdetr
+```
+
+并且 Worker 会继续调用：
+
+```text
+scripts\train_rfdetr.py
+scripts\predict_onnx_folder.py
+scripts\evaluate_rfdetr.py
+scripts\export_rfdetr_onnx_from_dataset.py
+```
+
+所以如果希望外部用户能在自己的 Windows 电脑上真实训练/推理，就必须给他们一份 Python 算法运行层。这里公开的是算法运行脚本和适配层；前端 Tauri 源码和 Go 后端源码仍然不放进用户版 ZIP。
+
+### 11.5 手动上传 GitHub Release
+
+当前电脑没有安装 `gh` 命令时，最稳妥的方式是用 GitHub 网页上传 Release。
+
+步骤如下：
+
+1. 打开仓库：
+
+   ```text
+   https://github.com/guojx0820/guojx0820.github.io
+   ```
+
+2. 点击右侧或顶部的 `Releases`。
+3. 点击 `Draft a new release`。
+4. `Choose a tag` 输入：
+
+   ```text
+   vision-platform-v0.1.0
+   ```
+
+5. 如果提示创建新 tag，选择创建。
+6. `Release title` 填：
+
+   ```text
+   RF-DETR 缺陷检测平台 Windows v0.1.0
+   ```
+
+7. 在说明中写：
+
+   ```markdown
+   首个 Windows 用户版。
+   - 软件本体：Tauri + React + TypeScript
+   - 后端：Go Vision Core
+   - 算法环境：Python .venv + RF-DETR
+   - 不含前端源码、Go 后端源码和私有数据集
+   ```
+
+8. 上传软件 ZIP：
+
+   ```text
+   D:\Projects\LVM\defect_lvm_detector\software\release\VisionPlatform_RFDETR_Windows_x64_v0.1.0.zip
+   ```
+
+9. 继续上传模型权重：
+
+   ```text
+   D:\Projects\LVM\defect_lvm_detector\weights\rf-detr\rf-detr-nano.pth
+   D:\Projects\LVM\defect_lvm_detector\weights\rf-detr\rf-detr-medium.pth
+   D:\Projects\LVM\defect_lvm_detector\weights\rf-detr\rf-detr-large.pth
+   ```
+
+10. 点击 `Publish release`。
+
+发布后，软件页中的这些链接就会生效：
+
+```text
+https://github.com/guojx0820/guojx0820.github.io/releases/download/vision-platform-v0.1.0/VisionPlatform_RFDETR_Windows_x64_v0.1.0.zip
+https://github.com/guojx0820/guojx0820.github.io/releases/download/vision-platform-v0.1.0/rf-detr-nano.pth
+https://github.com/guojx0820/guojx0820.github.io/releases/download/vision-platform-v0.1.0/rf-detr-medium.pth
+https://github.com/guojx0820/guojx0820.github.io/releases/download/vision-platform-v0.1.0/rf-detr-large.pth
+```
+
+### 11.6 更新博客软件页面
+
+修改软件页面后，在博客项目目录运行：
+
+```powershell
+cd D:\Projects\Blog\guojx0820.github.io
+npm run check
+npm run server
+```
+
+本地检查：
+
+```text
+http://127.0.0.1:4001/software/
+```
+
+确认菜单栏出现“软件”，页面风格和旧站一致，下载链接显示正常。
+
+确认无误后提交：
+
+```powershell
+git status
+git add _config.butterfly.yml source/software/index.md source/images/software/vision-platform-rfdetr.svg README_Blog.md
+git commit -m "Add software download page"
+git push origin main
+```
+
+等待 GitHub Actions 绿色成功后，打开：
+
+```text
+https://www.guojxblog.cn/software/
+```
+
+### 11.7 外部用户安装说明
+
+给用户的最简说明可以写成：
+
+```text
+1. 下载 VisionPlatform_RFDETR_Windows_x64_v0.1.0.zip。
+2. 解压到 D:\VisionPlatform_RFDETR\。
+3. 双击“配置 Python 算法环境.bat”。
+4. 双击“下载模型权重.bat”，或手动下载权重放入 models\rf-detr\。
+5. 双击“启动 RF-DETR 缺陷检测平台.bat”。
+6. 软件打开后先进入“环境检查”，确认后端、Python 和 CUDA 状态。
+```
+
+### 11.8 常见问题
+
+下载链接 404：说明 GitHub Release 还没有创建，或者 tag 名/文件名不一致。检查 tag 是否是 `vision-platform-v0.1.0`，文件名是否完全一致。
+
+ZIP 下载慢：可以把 ZIP 和权重上传到阿里云 OSS，然后在 `source/software/index.md` 增加“国内镜像下载”链接。
+
+软件打开但后端失败：先确认 `vision-core.exe` 是否被杀毒软件拦截；再检查 18080 端口是否被占用。
+
+Python 环境安装失败：确认 Python 3.10/3.11 已加入 PATH；如果 CUDA 版 PyTorch 安装失败，先改用 CPU 版本完成 smoke 测试。
+
+GPU 不可用：运行：
+
+```powershell
+.venv\Scripts\python.exe -c "import torch; print(torch.__version__); print(torch.cuda.is_available()); print(torch.version.cuda)"
+```
+
+输出 `False` 时，优先检查 NVIDIA 驱动和 PyTorch CUDA 版本是否匹配。

@@ -16,6 +16,7 @@ menu:
     留言: /comment/ || fa fa-paper-plane
     随笔: /notes/ || fas fa-feather-alt
     妙想: /ideas/ || fa-solid fa-lightbulb
+  软件: /software/ || fa fa-download
   友链: /link/ || fa fa-link
   #留言板: /messageboard/ || fa fa-paper-plane
   关于: /about/ || fas fa-heart
