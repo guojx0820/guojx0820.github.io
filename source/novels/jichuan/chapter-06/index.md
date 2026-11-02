@@ -403,6 +403,8 @@ type: novel
 
 邓衡没拔短刀。他从墙边扶起赵阿驹扔下的长枪，离孙度有四步，后头是自家药车，若向前直刺，孙度须倒退一步便撞木轮；想无伤逼退，远比讲书时说“以正制斜”难。
 
+<figure class="novel-figure"><img src="/images/novels/jichuan/chapter-06-2.webp" alt="窄巷横枪" width="1400" height="788" loading="lazy" decoding="async"><figcaption>窄巷横枪 · 原创情节插图</figcaption></figure>
+
 他平日借《礼记》里“中节”二字教这些年轻人收枪：枪尖出去多少，杆尾便会向后走多少，先量后列的脚，再量敌人的胸。此时他喊了声“中节”，孙度听见，却以为师傅又要他退让一篓药。他手中枪反而往前半尺，后头同伴不得不侧身避杆；邓看出这半尺，自己却不能借着教训徒弟便放开柳宁的车。
 
 “你若要向我问，别冲院车。”
@@ -902,5 +904,5 @@ type: novel
 **第六章完**
 
 <nav class="novel-chapter-nav" aria-label="章节导航"><a href="/novels/jichuan/chapter-05/">← 上一章</a><a href="/novels/jichuan/">作品目录</a><a href="/novels/jichuan/chapter-07/">下一章 →</a></nav>
-<p class="novel-small">本章正文已更新，原创插图将陆续补齐。</p>
+<p class="novel-small">本章含 1 幅 AI 辅助原创插图，情节以正文为准。</p>
 </div>
