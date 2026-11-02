@@ -803,6 +803,8 @@ type: novel
 
 巷口有人叫起火，邻居来了一些。饼肆主人从大门街边绕过来，带两桶水，叫自己伙计去喊坊中人。他起初只多看了一眼灯，此刻真正烧到了邻近，知道院墙挡不住烟，自己家的面袋也不肯替别人的火死守。
 
+<figure class="novel-figure"><img src="/images/novels/jichuan/chapter-04-3.webp" alt="院火救援" width="1400" height="788" loading="lazy" decoding="async"><figcaption>院火救援 · 原创情节插图</figcaption></figure>
+
 有人救屋，有人抬人，起初都想往同一处去。贺铁生站在门边，将搬榻的人与提水的人分开，短脚靠住墙，指哪道门能过哪一件。连着几声吆喝以后，狭巷终于有了进退。
 
 裴照野把纵火者交来帮忙看住的人，说明手里有过杖，不能只因捆了便随便松。他再往房里返，前房那位咳者仍没出来。
@@ -1430,5 +1432,5 @@ type: novel
 **第四章完**
 
 <nav class="novel-chapter-nav" aria-label="章节导航"><a href="/novels/jichuan/chapter-03/">← 上一章</a><a href="/novels/jichuan/">作品目录</a><a href="/novels/jichuan/chapter-05/">下一章 →</a></nav>
-<p class="novel-small">本章正文已更新，原创插图将陆续补齐。</p>
+<p class="novel-small">本章含 1 幅 AI 辅助原创插图，情节以正文为准。</p>
 </div>
