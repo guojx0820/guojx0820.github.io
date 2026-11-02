@@ -1,12 +1,11 @@
 ---
 title: "第七章　死者旧名牵药债／生人寒夜守残灯"
-description: "《济川山河录》第7章"
-type: "novel"
+type: novel
 ---
 
-[← 上一章](/novels/jichuan/chapter-06/)　|　[返回《济川山河录》目录](/novels/jichuan/)　|　[下一章 →](/novels/jichuan/chapter-08/)
-
----
+<div class="novel-shell novel-reader" data-novel-book="jichuan" data-chapter="7">
+<div class="novel-reading-bar"><a href="/novels/jichuan/">《济川山河录》 · 第7章</a><div role="group" aria-label="阅读字号"><button type="button" data-font="down" aria-label="缩小字号">A−</button><button type="button" data-font="reset">默认</button><button type="button" data-font="up" aria-label="增大字号">A＋</button></div></div>
+<nav class="novel-chapter-nav" aria-label="章节导航"><a href="/novels/jichuan/chapter-06/">← 上一章</a><a href="/novels/jichuan/">作品目录</a><a href="/novels/jichuan/chapter-08/">下一章 →</a></nav>
 
 王述前夜拿陈子安的名字去领药。昨日听说陈子安已死，今早他先把自己的一口铜锅卖了。
 
@@ -696,16 +695,6 @@ type: "novel"
 
 **第七章完**
 
-
-
-
-
-
-
-
-
-
-
----
-
-[← 上一章](/novels/jichuan/chapter-06/)　|　[返回《济川山河录》目录](/novels/jichuan/)　|　[下一章 →](/novels/jichuan/chapter-08/)
+<nav class="novel-chapter-nav" aria-label="章节导航"><a href="/novels/jichuan/chapter-06/">← 上一章</a><a href="/novels/jichuan/">作品目录</a><a href="/novels/jichuan/chapter-08/">下一章 →</a></nav>
+<p class="novel-small">本章正文已更新，原创插图将陆续补齐。</p>
+</div>

@@ -1237,3 +1237,69 @@ GPU 不可用：运行：
 ```
 
 输出 `False` 时，优先检查 NVIDIA 驱动和 PyTorch CUDA 版本是否匹配。
+
+## 十二、小说书架与插图连载维护
+
+小说入口为 https://www.guojxblog.cn/novels/ ，《济川山河录》目录为 https://www.guojxblog.cn/novels/jichuan/ 。点击封面进入作品页，再点“开始阅读”或章节标题进入正文。书架还有两个新作预留书位，筹备中卡片不提供空链接。
+
+### 1. 当前文件与图片放在哪里
+
+- 原稿目录：`D:\Projects\Wuxia_Novel\`。仅发布《济川山河录·第一章.md》至《济川山河录·第十一章.md》；核校记录和其他作品不会自动发布。
+- 作品与插图清单：`source/_data/novels.json`。记录章节标题、源文件名、正文摘要校验值、图片文件名、场景、插入段落、生成提示词。当前采用“中国风动漫＋传统水墨”画风，**每章一张关键场景插图**。
+- 封面与发布图片：`source/images/novels/jichuan/`。WebP 小图随 GitHub Pages 发布，页面使用同域链接及懒加载，不需要登录阿里云即可访问。
+- 高清原图：`D:\Projects\Wuxia_Novel\illustrations\jichuan\`。它们不进入博客仓库；早期写实草稿单独保留，不混入当前插图版。
+- 书架、作品目录及章节页面：`source/novels/`。现有章节网址保持不变。
+- 专区样式、阅读交互：`source/css/novels.css`、`source/js/novels.js`。字号和最后读到的章节仅保存于当前浏览器，清理浏览器数据后会重置；浏览器禁用本地存储时仍能正常阅读。
+
+### 2. 更新已有章节
+
+先保存原稿，再打开 PowerShell，依次运行：
+
+```powershell
+cd D:\Projects\Blog\guojx0820.github.io
+npm run novels:sync
+npm run novels:check
+npm run check
+npm run preview
+```
+
+打开 http://127.0.0.1:4001/novels/ ，点击封面进入作品页并检查更新章节。`novels:sync` 从原稿重新生成页面，不改变原稿文件；图片只在本地发布用文件存在时才插入，所以不会提前生成破图链接。它可重复运行，不会重复插图。不要只修改生成的章节页面，否则下次同步会覆盖该修改；正文修改应保存在原稿中。
+
+如果源目录换了位置，在当前 PowerShell 先设置：
+
+```powershell
+$env:NOVEL_SOURCE_ROOT = 'E:\MyNovels'
+npm run novels:sync
+npm run novels:check
+```
+
+`novels:check` 核对原稿正文、上下章导航和图片次数；原稿不在当前电脑时仍检查已发布页面结构和本地图片引用。
+
+### 3. 替换本章插图
+
+先查看清单中该章图片的 `id`、`url`、`anchor` 和 `prompt`。新图须对应实际发生的关键场景，遵守人物兵器、伤势及所处位置。保持动漫与水墨画风一致，避免额外人物、现代服装、仙侠光效或错误左右手。
+
+高清原图存入小说项目插图目录；将压缩后的 WebP 保存到清单指定的博客图片路径，再运行同步、检查和预览。建议横版 16:9、约 1400 像素宽，封面竖版 2:3；尽量控制体积。替换已发布图片时可使用新文件名并同步修改清单/同步器，避免读者缓存旧图。若以后迁移 OSS，先上传并检查公开链接，再统一替换页面路径，保留本地原图和映射记录，不把 AccessKey 写进项目。
+
+### 4. 新增第十二章或另一部小说
+
+当前同步器明确列出了前十一章与每章关键场景。新增章节时，需让 Codex扩展 `tools/sync-novels.mjs` 的章序、场景及对应选择，并把 `source/js/novels.js` 的继续阅读章节上限同步扩展。生成新章后重新核对前章“下一章”、新章“上一章”以及作品页“最新章节”入口。
+
+新增另一部作品时，为其建立独立英文 slug、作品清单、封面及章节目录，并扩展书架生成器，将一个筹备书位替换成正式作品卡。切勿覆盖《济川山河录》的目录和旧网址。可让 Codex 按现有组件实现，而不是另换主题。
+
+### 5. 检查后逐章发布
+
+确认正文、图片、书架、手机阅读和上下章链接正常后，再执行提交。先运行 `git status`，只添加本次涉及的小说文件、图片与必要维护文件，不使用不加检查的 `git add .`。
+
+```powershell
+git status
+git add source/novels source/images/novels/jichuan source/_data/novels.json
+git commit -m "Update Jichuan illustrated chapter"
+git push origin main
+```
+
+如本次还改了同步工具、阅读 CSS/JS 或本说明，检查差异后将这些文件一并添加。进入 GitHub 仓库 Actions，等待最新 `Deploy Hexo site to Pages` 的 build、deploy 均成功，再进入该章网址确认正文和图片可见。发布第一章后再发布下一章，避免未完成资源的链接提前出现在目录。
+
+可交给 Codex 的提示词：
+
+> 请读取小说原稿与当前作品清单，更新指定章节，正文保持原样。每章仅生成一张中国风动漫融合传统水墨的关键场景图，先核对人物、兵器、地形与伤势。同步页面并检查正文一致性、手机阅读、字号、上下章与图片懒加载；只有在我明确要求发布时才提交推送，并等待 Pages 成功、检查线上章节。小说专区以外的主题风格不要改。

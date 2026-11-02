@@ -1,0 +1,220 @@
+{
+  "slug": "jichuan",
+  "title": "济川山河录",
+  "author": "洛沐",
+  "status": "连载中",
+  "genre": "历史武侠 · 河洛群像",
+  "description": "一场孟津夜渡，一句生死托付。船户、医者与守城新卒，在天宝末年的河洛风雪中护人、守诺，追寻一条牵动生死的旧药路。",
+  "cover": "/images/novels/jichuan/cover.webp",
+  "chapters": [
+    {
+      "number": 1,
+      "sourceFile": "济川山河录·第一章.md",
+      "title": "第一章　孟津夜渡承孤诺／洛水寒灯认旧盟",
+      "hash": "177c3164ff27277fbacfc9ebdceb9aa9b75e87e6a2a525a5becc2501639a65d0",
+      "url": "/novels/jichuan/chapter-01/",
+      "scenes": [
+        {
+          "id": "chapter-01-1",
+          "caption": "寒江救客",
+          "paragraphIndex": 7,
+          "anchor": "两人合力，将伤者翻上船板。",
+          "excerpt": "“再帮一把！”\n\n两人合力，将伤者翻上船板。\n\n伤者蜷了一下，嘴里吐出水，右手仍紧攥着一团东西。鲁怀川解开他颈边的衣带，湿衣贴着皮肉，胸口有一道斜着的伤，血被河水洗淡，又一缕缕往外渗。",
+          "prompt": "Use case: illustration-story. One wide landscape 16:9 Chinese anime wuxia illustration infused with traditional Chinese ink wash aesthetics, elegant clean 2D character linework, restrained cel shading, expressive grounded martial movements, atmospheric ink mountains and generous painterly negative space for the original historical novel 济川山河录. Tang dynasty Tianbao-era winter in the Luoyang/Mengjin region. Ink teal, winter grey, parchment and warm lantern light; beautiful refined guofeng animation storytelling, Qinglü landscape accents, traditional cultural grace; show restraint, compassion and keeping promises through the actual character action, never invent sect symbols or supernatural powers. NO text, captions, logos, watermark, modern objects, fantasy energy, flying martial artists, exaggerated gore. Weapons, hand positions, people, geography and injuries MUST follow the Chinese source excerpt. Do not invent additional battles. Frame grounded physical movement, clear silhouettes, credible anatomy. Chinese source is authoritative, character style details only fill unspecified appearances.\nScene focus: 寒江救客. Depict ONE coherent moment from this excerpt, prioritizing the middle paragraph.\n“再帮一把！”\n\n两人合力，将伤者翻上船板。\n\n伤者蜷了一下，嘴里吐出水，右手仍紧攥着一团东西。鲁怀川解开他颈边的衣带，湿衣贴着皮肉，胸口有一道斜着的伤，血被河水洗淡，又一缕缕往外渗。",
+          "url": "/images/novels/jichuan/chapter-01-1.webp",
+          "original": null
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "sourceFile": "济川山河录·第二章.md",
+      "title": "第二章　断橹留成生死债／寒灯照见往来人",
+      "hash": "ec533a07ca7f9db5e0c1c8ffe8576c9a307cae278ac7ec15847a9f54f2da1a6b",
+      "url": "/novels/jichuan/chapter-02/",
+      "scenes": [
+        {
+          "id": "chapter-02-2",
+          "caption": "知止脱扣",
+          "paragraphIndex": 502,
+          "anchor": "师父从《礼记·大学》取“知止”二字，给这守势作名。裴照野从前总觉得名字大，练法小：端一盆水，让老人从两侧推，脚退多半步便撞门槛，硬站着不退又将水洒尽。方才他收肘、斜进、借肩，只走到褚衡伤肩迫其松手的那一步；再追一步，药囊在身后破开，许满的棍便护不到他。",
+          "excerpt": "“陶翁还这样教？”\n\n师父从《礼记·大学》取“知止”二字，给这守势作名。裴照野从前总觉得名字大，练法小：端一盆水，让老人从两侧推，脚退多半步便撞门槛，硬站着不退又将水洒尽。方才他收肘、斜进、借肩，只走到褚衡伤肩迫其松手的那一步；再追一步，药囊在身后破开，许满的棍便护不到他。\n\n方才没有那几年的水盆，他的手大概已经被针穿透。",
+          "prompt": "Use case: illustration-story. One wide landscape 16:9 Chinese anime wuxia illustration infused with traditional Chinese ink wash aesthetics, elegant clean 2D character linework, restrained cel shading, expressive grounded martial movements, atmospheric ink mountains and generous painterly negative space for the original historical novel 济川山河录. Tang dynasty Tianbao-era winter in the Luoyang/Mengjin region. Ink teal, winter grey, parchment and warm lantern light; beautiful refined guofeng animation storytelling, Qinglü landscape accents, traditional cultural grace; show restraint, compassion and keeping promises through the actual character action, never invent sect symbols or supernatural powers. NO text, captions, logos, watermark, modern objects, fantasy energy, flying martial artists, exaggerated gore. Weapons, hand positions, people, geography and injuries MUST follow the Chinese source excerpt. Do not invent additional battles. Frame grounded physical movement, clear silhouettes, credible anatomy. Chinese source is authoritative, character style details only fill unspecified appearances.\nScene focus: 知止脱扣. Depict ONE coherent moment from this excerpt, prioritizing the middle paragraph.\n“陶翁还这样教？”\n\n师父从《礼记·大学》取“知止”二字，给这守势作名。裴照野从前总觉得名字大，练法小：端一盆水，让老人从两侧推，脚退多半步便撞门槛，硬站着不退又将水洒尽。方才他收肘、斜进、借肩，只走到褚衡伤肩迫其松手的那一步；再追一步，药囊在身后破开，许满的棍便护不到他。\n\n方才没有那几年的水盆，他的手大概已经被针穿透。",
+          "url": "/images/novels/jichuan/chapter-02-2.webp",
+          "original": null
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "sourceFile": "济川山河录·第三章.md",
+      "title": "第三章　纸上亡魂归旧渡／弦间生路入寒芦",
+      "hash": "fc1f6c7b6449f1f2e84ee74ed6f1d0861882c91c93fde2bd49c9bcd4610e164f",
+      "url": "/novels/jichuan/chapter-03/",
+      "scenes": [
+        {
+          "id": "chapter-03-3",
+          "caption": "破弓脱险",
+          "paragraphIndex": 497,
+          "anchor": "沈蘅芜松弓，以弓弦兜住他胸前衣带，向旁猛扯。她右脚落在坡下较实的一片泥上，才没被他反带过去；弦只拽歪他半步，给许满留出收刀的空。弓梢却承不住两人急力，裂纹立即发响。",
+          "excerpt": "他不等裴照野撞上，身体先转，刃背拍在竹片上，竹片裂了一半。裴照野失去支点，脚在坡边滑，整个人向前倾。\n\n沈蘅芜松弓，以弓弦兜住他胸前衣带，向旁猛扯。她右脚落在坡下较实的一片泥上，才没被他反带过去；弦只拽歪他半步，给许满留出收刀的空。弓梢却承不住两人急力，裂纹立即发响。\n\n褚衡的小刀从她小臂边划过，衣破，皮开。她拉人那一下让自己避不全，血流进右袖。",
+          "prompt": "Use case: illustration-story. One wide landscape 16:9 Chinese anime wuxia illustration infused with traditional Chinese ink wash aesthetics, elegant clean 2D character linework, restrained cel shading, expressive grounded martial movements, atmospheric ink mountains and generous painterly negative space for the original historical novel 济川山河录. Tang dynasty Tianbao-era winter in the Luoyang/Mengjin region. Ink teal, winter grey, parchment and warm lantern light; beautiful refined guofeng animation storytelling, Qinglü landscape accents, traditional cultural grace; show restraint, compassion and keeping promises through the actual character action, never invent sect symbols or supernatural powers. NO text, captions, logos, watermark, modern objects, fantasy energy, flying martial artists, exaggerated gore. Weapons, hand positions, people, geography and injuries MUST follow the Chinese source excerpt. Do not invent additional battles. Frame grounded physical movement, clear silhouettes, credible anatomy. Chinese source is authoritative, character style details only fill unspecified appearances.\nScene focus: 破弓脱险. Depict ONE coherent moment from this excerpt, prioritizing the middle paragraph.\n他不等裴照野撞上，身体先转，刃背拍在竹片上，竹片裂了一半。裴照野失去支点，脚在坡边滑，整个人向前倾。\n\n沈蘅芜松弓，以弓弦兜住他胸前衣带，向旁猛扯。她右脚落在坡下较实的一片泥上，才没被他反带过去；弦只拽歪他半步，给许满留出收刀的空。弓梢却承不住两人急力，裂纹立即发响。\n\n褚衡的小刀从她小臂边划过，衣破，皮开。她拉人那一下让自己避不全，血流进右袖。",
+          "url": "/images/novels/jichuan/chapter-03-3.webp",
+          "original": null
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "sourceFile": "济川山河录·第四章.md",
+      "title": "第四章　旧院悬灯遮血债／长街飞矢护归人",
+      "hash": "68ee9f6aff9ba73ac233033f1fa12ee62be7731b4167979292c0205c7d166ad0",
+      "url": "/novels/jichuan/chapter-04/",
+      "scenes": [
+        {
+          "id": "chapter-04-3",
+          "caption": "院火救援",
+          "paragraphIndex": 397,
+          "anchor": "巷口有人叫起火，邻居来了一些。饼肆主人从大门街边绕过来，带两桶水，叫自己伙计去喊坊中人。他起初只多看了一眼灯，此刻真正烧到了邻近，知道院墙挡不住烟，自己家的面袋也不肯替别人的火死守。",
+          "excerpt": "她已经认得用绳的地方。\n\n巷口有人叫起火，邻居来了一些。饼肆主人从大门街边绕过来，带两桶水，叫自己伙计去喊坊中人。他起初只多看了一眼灯，此刻真正烧到了邻近，知道院墙挡不住烟，自己家的面袋也不肯替别人的火死守。\n\n有人救屋，有人抬人，起初都想往同一处去。贺铁生站在门边，将搬榻的人与提水的人分开，短脚靠住墙，指哪道门能过哪一件。连着几声吆喝以后，狭巷终于有了进退。",
+          "prompt": "Use case: illustration-story. One wide landscape 16:9 Chinese anime wuxia illustration infused with traditional Chinese ink wash aesthetics, elegant clean 2D character linework, restrained cel shading, expressive grounded martial movements, atmospheric ink mountains and generous painterly negative space for the original historical novel 济川山河录. Tang dynasty Tianbao-era winter in the Luoyang/Mengjin region. Ink teal, winter grey, parchment and warm lantern light; beautiful refined guofeng animation storytelling, Qinglü landscape accents, traditional cultural grace; show restraint, compassion and keeping promises through the actual character action, never invent sect symbols or supernatural powers. NO text, captions, logos, watermark, modern objects, fantasy energy, flying martial artists, exaggerated gore. Weapons, hand positions, people, geography and injuries MUST follow the Chinese source excerpt. Do not invent additional battles. Frame grounded physical movement, clear silhouettes, credible anatomy. Chinese source is authoritative, character style details only fill unspecified appearances.\nScene focus: 院火救援. Depict ONE coherent moment from this excerpt, prioritizing the middle paragraph.\n她已经认得用绳的地方。\n\n巷口有人叫起火，邻居来了一些。饼肆主人从大门街边绕过来，带两桶水，叫自己伙计去喊坊中人。他起初只多看了一眼灯，此刻真正烧到了邻近，知道院墙挡不住烟，自己家的面袋也不肯替别人的火死守。\n\n有人救屋，有人抬人，起初都想往同一处去。贺铁生站在门边，将搬榻的人与提水的人分开，短脚靠住墙，指哪道门能过哪一件。连着几声吆喝以后，狭巷终于有了进退。",
+          "url": "/images/novels/jichuan/chapter-04-3.webp",
+          "original": null
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "sourceFile": "济川山河录·第五章.md",
+      "title": "第五章　半纸病书争北路／一篷寒火照归人",
+      "hash": "83abe575f02de674a5a7cf018bf473ac5b3cc210b60b348efd15a444b05df123",
+      "url": "/novels/jichuan/chapter-05/",
+      "scenes": [
+        {
+          "id": "chapter-05-2",
+          "caption": "西坡狭屋",
+          "paragraphIndex": 381,
+          "anchor": "褚衡向左右看。周差役在院门左，崔的季姓随从带刀站另一侧，县中见证人还在屋里核布，另一个随从守门口柳宁的车；他带一名车夫、一名护货汉子。身后这条路有马，能退，前面有四卷布和另一封还没落署的纸。",
+          "excerpt": "卢站到田身前：“鲁怀川的案子，你同我回去答。芦埠与今日文书的，也一并问。”\n\n褚衡向左右看。周差役在院门左，崔的季姓随从带刀站另一侧，县中见证人还在屋里核布，另一个随从守门口柳宁的车；他带一名车夫、一名护货汉子。身后这条路有马，能退，前面有四卷布和另一封还没落署的纸。\n\n“若只问那一刀，我认得路。”他说。",
+          "prompt": "Use case: illustration-story. One wide landscape 16:9 Chinese anime wuxia illustration infused with traditional Chinese ink wash aesthetics, elegant clean 2D character linework, restrained cel shading, expressive grounded martial movements, atmospheric ink mountains and generous painterly negative space for the original historical novel 济川山河录. Tang dynasty Tianbao-era winter in the Luoyang/Mengjin region. Ink teal, winter grey, parchment and warm lantern light; beautiful refined guofeng animation storytelling, Qinglü landscape accents, traditional cultural grace; show restraint, compassion and keeping promises through the actual character action, never invent sect symbols or supernatural powers. NO text, captions, logos, watermark, modern objects, fantasy energy, flying martial artists, exaggerated gore. Weapons, hand positions, people, geography and injuries MUST follow the Chinese source excerpt. Do not invent additional battles. Frame grounded physical movement, clear silhouettes, credible anatomy. Chinese source is authoritative, character style details only fill unspecified appearances.\nScene focus: 西坡狭屋. Depict ONE coherent moment from this excerpt, prioritizing the middle paragraph.\n卢站到田身前：“鲁怀川的案子，你同我回去答。芦埠与今日文书的，也一并问。”\n\n褚衡向左右看。周差役在院门左，崔的季姓随从带刀站另一侧，县中见证人还在屋里核布，另一个随从守门口柳宁的车；他带一名车夫、一名护货汉子。身后这条路有马，能退，前面有四卷布和另一封还没落署的纸。\n\n“若只问那一刀，我认得路。”他说。",
+          "url": "/images/novels/jichuan/chapter-05-2.webp",
+          "original": null
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "sourceFile": "济川山河录·第六章.md",
+      "title": "第六章　西坊双契争生药／短巷横枪护病车",
+      "hash": "5e9fb61f281b0bd5745713c518eba2dc49d16085a4ca5ec6776ee692f59bc065",
+      "url": "/novels/jichuan/chapter-06/",
+      "scenes": [
+        {
+          "id": "chapter-06-2",
+          "caption": "窄巷横枪",
+          "paragraphIndex": 197,
+          "anchor": "邓衡没拔短刀。他从墙边扶起赵阿驹扔下的长枪，离孙度有四步，后头是自家药车，若向前直刺，孙度须倒退一步便撞木轮；想无伤逼退，远比讲书时说“以正制斜”难。",
+          "excerpt": "孙度仍站在车旁，不动。两名卒子跟着他，枪杆一前一后，堵死柳宁出巷的路。邓衡这边除赵阿驹，只有柳宁、两位抬者，卢与同役尚在前厅；人数看似相等，却有三枪在窄处，柳宁再好水上撑船，也不能把船橹从一丈巷壁里变出来。\n\n邓衡没拔短刀。他从墙边扶起赵阿驹扔下的长枪，离孙度有四步，后头是自家药车，若向前直刺，孙度须倒退一步便撞木轮；想无伤逼退，远比讲书时说“以正制斜”难。\n\n他平日借《礼记》里“中节”二字教这些年轻人收枪：枪尖出去多少，杆尾便会向后走多少，先量后列的脚，再量敌人的胸。此时他喊了声“中节”，孙度听见，却以为师傅又要他退让一篓药。他手中枪反而往前半尺，后头同伴不得不侧身避杆；邓看出这半尺，自己却不能借着教训徒弟便放开柳宁的车。",
+          "prompt": "Use case: illustration-story. One wide landscape 16:9 Chinese anime wuxia illustration infused with traditional Chinese ink wash aesthetics, elegant clean 2D character linework, restrained cel shading, expressive grounded martial movements, atmospheric ink mountains and generous painterly negative space for the original historical novel 济川山河录. Tang dynasty Tianbao-era winter in the Luoyang/Mengjin region. Ink teal, winter grey, parchment and warm lantern light; beautiful refined guofeng animation storytelling, Qinglü landscape accents, traditional cultural grace; show restraint, compassion and keeping promises through the actual character action, never invent sect symbols or supernatural powers. NO text, captions, logos, watermark, modern objects, fantasy energy, flying martial artists, exaggerated gore. Weapons, hand positions, people, geography and injuries MUST follow the Chinese source excerpt. Do not invent additional battles. Frame grounded physical movement, clear silhouettes, credible anatomy. Chinese source is authoritative, character style details only fill unspecified appearances.\nScene focus: 窄巷横枪. Depict ONE coherent moment from this excerpt, prioritizing the middle paragraph.\n孙度仍站在车旁，不动。两名卒子跟着他，枪杆一前一后，堵死柳宁出巷的路。邓衡这边除赵阿驹，只有柳宁、两位抬者，卢与同役尚在前厅；人数看似相等，却有三枪在窄处，柳宁再好水上撑船，也不能把船橹从一丈巷壁里变出来。\n\n邓衡没拔短刀。他从墙边扶起赵阿驹扔下的长枪，离孙度有四步，后头是自家药车，若向前直刺，孙度须倒退一步便撞木轮；想无伤逼退，远比讲书时说“以正制斜”难。\n\n他平日借《礼记》里“中节”二字教这些年轻人收枪：枪尖出去多少，杆尾便会向后走多少，先量后列的脚，再量敌人的胸。此时他喊了声“中节”，孙度听见，却以为师傅又要他退让一篓药。他手中枪反而往前半尺，后头同伴不得不侧身避杆；邓看出这半尺，自己却不能借着教训徒弟便放开柳宁的车。",
+          "url": "/images/novels/jichuan/chapter-06-2.webp",
+          "original": null
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "sourceFile": "济川山河录·第七章.md",
+      "title": "第七章　死者旧名牵药债／生人寒夜守残灯",
+      "hash": "c37e3e18522cf0e599161d0f89b3fbb74128ee7668472b8c6b33d0de132140e3",
+      "url": "/novels/jichuan/chapter-07/",
+      "scenes": [
+        {
+          "id": "chapter-07-2",
+          "caption": "门槛争距",
+          "paragraphIndex": 156,
+          "anchor": "王述在墙边以扁担低低一拨，先拨的是此人足前半块砖，不是头。他踩砖一滑，刀势偏到门木上，沈趁那一瞬向前逼，刃贴对方袖口，令他不敢把臂全伸。王述紧接着将扁担一端压在门槛，截住他膝前；他持刀往下划，扁担木皮裂开一条，王述左小腿也被刀尖划破。王述忍疼没强撑着对打，放开扁担，退到墙外。沈亦没有追入小室。卢的一役此时从前头绕到门里，用长棍抵住持刀者腰侧；三人合住一个刚滑过脚、又被门口挤住的人，才使他把刀放下。",
+          "excerpt": "缺指汉一脚踢翻小桌，桌板正撞裴小腿。裴退到苗身边，苗站不稳，二人一同靠窗。持刀者见卢入门、同伙在前口被堵，转身从后小室走，拖苗不动便先逃。沈在后门见他出来，刀鞘先横在门边。他短刀长她半掌，从门内向外连刺两下，她让开正线，不迎锋，刀鞘敲在他手腕外侧，未打落刀；她若第二下照先前落处去，对方稍改腕便可削她左手。\n\n王述在墙边以扁担低低一拨，先拨的是此人足前半块砖，不是头。他踩砖一滑，刀势偏到门木上，沈趁那一瞬向前逼，刃贴对方袖口，令他不敢把臂全伸。王述紧接着将扁担一端压在门槛，截住他膝前；他持刀往下划，扁担木皮裂开一条，王述左小腿也被刀尖划破。王述忍疼没强撑着对打，放开扁担，退到墙外。沈亦没有追入小室。卢的一役此时从前头绕到门里，用长棍抵住持刀者腰侧；三人合住一个刚滑过脚、又被门口挤住的人，才使他把刀放下。\n\n缺指汉趁外间撞桌乱，往窑后塌墙爬。墙外并无沈与王述，他若翻过去，追者须绕一段。赵阿驹刚领卢的另一同役从矮墙路赶来，看见有人探头，不喊一声便逞能上去扯脚，只把旁边小车推过来挡他落地。缺指汉在墙上停一息，向远处跳，落时脚踝扭了一下，仍跌跌撞撞走进几条分岔巷；同役追了数步，知道自己不识他钻的那处院门，先记了门与人身形，回报卢，不因只差几步便丢下窑内两名持兵器者在别人手中。",
+          "prompt": "Use case: illustration-story. One wide landscape 16:9 Chinese anime wuxia illustration infused with traditional Chinese ink wash aesthetics, elegant clean 2D character linework, restrained cel shading, expressive grounded martial movements, atmospheric ink mountains and generous painterly negative space for the original historical novel 济川山河录. Tang dynasty Tianbao-era winter in the Luoyang/Mengjin region. Ink teal, winter grey, parchment and warm lantern light; beautiful refined guofeng animation storytelling, Qinglü landscape accents, traditional cultural grace; show restraint, compassion and keeping promises through the actual character action, never invent sect symbols or supernatural powers. NO text, captions, logos, watermark, modern objects, fantasy energy, flying martial artists, exaggerated gore. Weapons, hand positions, people, geography and injuries MUST follow the Chinese source excerpt. Do not invent additional battles. Frame grounded physical movement, clear silhouettes, credible anatomy. Chinese source is authoritative, character style details only fill unspecified appearances.\nScene focus: 门槛争距. Depict ONE coherent moment from this excerpt, prioritizing the middle paragraph.\n缺指汉一脚踢翻小桌，桌板正撞裴小腿。裴退到苗身边，苗站不稳，二人一同靠窗。持刀者见卢入门、同伙在前口被堵，转身从后小室走，拖苗不动便先逃。沈在后门见他出来，刀鞘先横在门边。他短刀长她半掌，从门内向外连刺两下，她让开正线，不迎锋，刀鞘敲在他手腕外侧，未打落刀；她若第二下照先前落处去，对方稍改腕便可削她左手。\n\n王述在墙边以扁担低低一拨，先拨的是此人足前半块砖，不是头。他踩砖一滑，刀势偏到门木上，沈趁那一瞬向前逼，刃贴对方袖口，令他不敢把臂全伸。王述紧接着将扁担一端压在门槛，截住他膝前；他持刀往下划，扁担木皮裂开一条，王述左小腿也被刀尖划破。王述忍疼没强撑着对打，放开扁担，退到墙外。沈亦没有追入小室。卢的一役此时从前头绕到门里，用长棍抵住持刀者腰侧；三人合住一个刚滑过脚、又被门口挤住的人，才使他把刀放下。\n\n缺指汉趁外间撞桌乱，往窑后塌墙爬。墙外并无沈与王述，他若翻过去，追者须绕一段。赵阿驹刚领卢的另一同役从矮墙路赶来，看见有人探头，不喊一声便逞能上去扯脚，只把旁边小车推过来挡他落地。缺指汉在墙上停一息，向远处跳，落时脚踝扭了一下，仍跌跌撞撞走进几条分岔巷；同役追了数步，知道自己不识他钻的那处院门，先记了门与人身形，回报卢，不因只差几步便丢下窑内两名持兵器者在别人手中。",
+          "url": "/images/novels/jichuan/chapter-07-2.webp",
+          "original": null
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "sourceFile": "济川山河录·第八章.md",
+      "title": "第八章　铁篓拆封惊西坊／寒场试刃见新兵",
+      "hash": "47af97e7694c30d5034e26c0f5a6cf807cfa64a2b5f3175f9960dd0f5cf4f848",
+      "url": "/novels/jichuan/chapter-08/",
+      "scenes": [
+        {
+          "id": "chapter-08-3",
+          "caption": "惊骡清道",
+          "paragraphIndex": 118,
+          "anchor": "孟先简喝令高信一列退到土埂，一列把道边杆束搬开。高信没等他喊第二遍，捏着裂开的拇指去拖最靠车轮的一束杆。两人一左一右将束子抬过土坎，后列的人照早上的步法依次后退，给车留出一车身宽。邓衡因左肩使不上力，不去抢缰，立在骡前侧以右手挥衣，逼它看向空地；赶车的人趁它一怔，从侧后拉紧笼头。许敬存叫另一人先把车后两幼儿抱下，老妇不肯离车，仍攥着一只麻袋，直到她看见骡站住才松手。",
+          "excerpt": "晒谷场西侧原有一条窄道通往城门外的大路，新募人操练时把木杆与水桶堆在道旁，赶车的见空便挤。一辆载老妇与两幼儿的车先陷在冻过的辙里，后车催、前人避，靠场的一匹瘦骡被横来的木杆惊了，挣着缰向矢靶那边斜奔。试射早停，靶前仍有散落的硬木支架；车上幼儿抱住车栏，叫不出声。有人喊“拉它”，十几个新募者同时涌过去，竟把窄道堵得更死。\n\n孟先简喝令高信一列退到土埂，一列把道边杆束搬开。高信没等他喊第二遍，捏着裂开的拇指去拖最靠车轮的一束杆。两人一左一右将束子抬过土坎，后列的人照早上的步法依次后退，给车留出一车身宽。邓衡因左肩使不上力，不去抢缰，立在骡前侧以右手挥衣，逼它看向空地；赶车的人趁它一怔，从侧后拉紧笼头。许敬存叫另一人先把车后两幼儿抱下，老妇不肯离车，仍攥着一只麻袋，直到她看见骡站住才松手。\n\n高信先前见过车夫从轮后硬推，三人齐使力，轮仍在冻辙里空转。他想起孟叫后列退时留下的半步，便请另一名脚夫先把轮前松土刮开，自己用短木从后垫轮；常九娘借来石子塞低处。一人控骡，三人照同一声使力，车才慢慢上来。木垫边被压出一道裂，高信抽出来时拇指旧口也疼。车上老妇的麻袋装的是两件旧衣与一口小锅，分量轻得她方才实不必抓得那样紧；她从昨夜走到今日，能抓住的只剩这点东西。高信把锅拾回车上，老妇问他是不是军中人，他看了许敬存一眼，道：“还未选上。”",
+          "prompt": "Use case: illustration-story. One wide landscape 16:9 Chinese anime wuxia illustration infused with traditional Chinese ink wash aesthetics, elegant clean 2D character linework, restrained cel shading, expressive grounded martial movements, atmospheric ink mountains and generous painterly negative space for the original historical novel 济川山河录. Tang dynasty Tianbao-era winter in the Luoyang/Mengjin region. Ink teal, winter grey, parchment and warm lantern light; beautiful refined guofeng animation storytelling, Qinglü landscape accents, traditional cultural grace; show restraint, compassion and keeping promises through the actual character action, never invent sect symbols or supernatural powers. NO text, captions, logos, watermark, modern objects, fantasy energy, flying martial artists, exaggerated gore. Weapons, hand positions, people, geography and injuries MUST follow the Chinese source excerpt. Do not invent additional battles. Frame grounded physical movement, clear silhouettes, credible anatomy. Chinese source is authoritative, character style details only fill unspecified appearances.\nScene focus: 惊骡清道. Depict ONE coherent moment from this excerpt, prioritizing the middle paragraph.\n晒谷场西侧原有一条窄道通往城门外的大路，新募人操练时把木杆与水桶堆在道旁，赶车的见空便挤。一辆载老妇与两幼儿的车先陷在冻过的辙里，后车催、前人避，靠场的一匹瘦骡被横来的木杆惊了，挣着缰向矢靶那边斜奔。试射早停，靶前仍有散落的硬木支架；车上幼儿抱住车栏，叫不出声。有人喊“拉它”，十几个新募者同时涌过去，竟把窄道堵得更死。\n\n孟先简喝令高信一列退到土埂，一列把道边杆束搬开。高信没等他喊第二遍，捏着裂开的拇指去拖最靠车轮的一束杆。两人一左一右将束子抬过土坎，后列的人照早上的步法依次后退，给车留出一车身宽。邓衡因左肩使不上力，不去抢缰，立在骡前侧以右手挥衣，逼它看向空地；赶车的人趁它一怔，从侧后拉紧笼头。许敬存叫另一人先把车后两幼儿抱下，老妇不肯离车，仍攥着一只麻袋，直到她看见骡站住才松手。\n\n高信先前见过车夫从轮后硬推，三人齐使力，轮仍在冻辙里空转。他想起孟叫后列退时留下的半步，便请另一名脚夫先把轮前松土刮开，自己用短木从后垫轮；常九娘借来石子塞低处。一人控骡，三人照同一声使力，车才慢慢上来。木垫边被压出一道裂，高信抽出来时拇指旧口也疼。车上老妇的麻袋装的是两件旧衣与一口小锅，分量轻得她方才实不必抓得那样紧；她从昨夜走到今日，能抓住的只剩这点东西。高信把锅拾回车上，老妇问他是不是军中人，他看了许敬存一眼，道：“还未选上。”",
+          "url": "/images/novels/jichuan/chapter-08-3.webp",
+          "original": null
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "sourceFile": "济川山河录·第九章.md",
+      "title": "第九章　废渡寒烟藏病客／残笺假押引来人",
+      "hash": "45f438c5dcc6715ec31fedf4178ca4bf1cd105ecf1e272289c4d945f76dac778",
+      "url": "/novels/jichuan/chapter-09/",
+      "scenes": [
+        {
+          "id": "chapter-09-2",
+          "caption": "泼水救亲",
+          "paragraphIndex": 42,
+          "anchor": "韩铎听见箭响，猛地将水碗往刀手胸前掷。木碗不重，水却泼进对方眼里。刀手侧身仍能看，抽刀时已晚半息；韩以双手扯车绳，把阿椿车厢往自己这一边带了一小尺，使车轮横在孩子与刀间。刀刃划开他左前臂，血很快染袖。他若再使力，车后轮会压到月娘脚，便不得不松。刀手退一步要绕，裴从低轮处起身，顺手抓起车辕旁盛水的木瓢，不拿针向那人喉颈飞。他用瓢沿顶住车辕与刀手的脚之间，给月娘有空把阿椿抱到轮后。手掌旧伤受了一震，瓢底裂了。",
+          "excerpt": "箭先下来，扎在路石旁一尺，溅得裴袖上泥点。窑顶那人射得不算差，卢若刚才急一步，箭会过他小腿。第二支箭迟迟不发，射者正往周推梯处挪。卢趁那边视线改向，在石后喊：“周，护住窑口，别爬。”\n\n韩铎听见箭响，猛地将水碗往刀手胸前掷。木碗不重，水却泼进对方眼里。刀手侧身仍能看，抽刀时已晚半息；韩以双手扯车绳，把阿椿车厢往自己这一边带了一小尺，使车轮横在孩子与刀间。刀刃划开他左前臂，血很快染袖。他若再使力，车后轮会压到月娘脚，便不得不松。刀手退一步要绕，裴从低轮处起身，顺手抓起车辕旁盛水的木瓢，不拿针向那人喉颈飞。他用瓢沿顶住车辕与刀手的脚之间，给月娘有空把阿椿抱到轮后。手掌旧伤受了一震，瓢底裂了。\n\n卢已近到短棒可及的路窄处。他一手掌伤也未好，棒握得不如平时紧；刀手短刃在近处能削，卢若直扑，吃亏的是自己的腕。他不追那把刀，先敲刀手前脚旁冻泥，再横棒逼他向塌木桩一侧退。刀手看出卢在争位置，刀尖一闪刺向他的腿。卢拦得不全，棉裤破一口，皮上见血；他左膝往后一缩，棒头乘对方刺尽时击在持刀腕的外侧。腕没折，刀也没立时飞，刀手却不得不收回护身。",
+          "prompt": "Use case: illustration-story. One wide landscape 16:9 Chinese anime wuxia illustration infused with traditional Chinese ink wash aesthetics, elegant clean 2D character linework, restrained cel shading, expressive grounded martial movements, atmospheric ink mountains and generous painterly negative space for the original historical novel 济川山河录. Tang dynasty Tianbao-era winter in the Luoyang/Mengjin region. Ink teal, winter grey, parchment and warm lantern light; beautiful refined guofeng animation storytelling, Qinglü landscape accents, traditional cultural grace; show restraint, compassion and keeping promises through the actual character action, never invent sect symbols or supernatural powers. NO text, captions, logos, watermark, modern objects, fantasy energy, flying martial artists, exaggerated gore. Weapons, hand positions, people, geography and injuries MUST follow the Chinese source excerpt. Do not invent additional battles. Frame grounded physical movement, clear silhouettes, credible anatomy. Chinese source is authoritative, character style details only fill unspecified appearances.\nScene focus: 泼水救亲. Depict ONE coherent moment from this excerpt, prioritizing the middle paragraph.\n箭先下来，扎在路石旁一尺，溅得裴袖上泥点。窑顶那人射得不算差，卢若刚才急一步，箭会过他小腿。第二支箭迟迟不发，射者正往周推梯处挪。卢趁那边视线改向，在石后喊：“周，护住窑口，别爬。”\n\n韩铎听见箭响，猛地将水碗往刀手胸前掷。木碗不重，水却泼进对方眼里。刀手侧身仍能看，抽刀时已晚半息；韩以双手扯车绳，把阿椿车厢往自己这一边带了一小尺，使车轮横在孩子与刀间。刀刃划开他左前臂，血很快染袖。他若再使力，车后轮会压到月娘脚，便不得不松。刀手退一步要绕，裴从低轮处起身，顺手抓起车辕旁盛水的木瓢，不拿针向那人喉颈飞。他用瓢沿顶住车辕与刀手的脚之间，给月娘有空把阿椿抱到轮后。手掌旧伤受了一震，瓢底裂了。\n\n卢已近到短棒可及的路窄处。他一手掌伤也未好，棒握得不如平时紧；刀手短刃在近处能削，卢若直扑，吃亏的是自己的腕。他不追那把刀，先敲刀手前脚旁冻泥，再横棒逼他向塌木桩一侧退。刀手看出卢在争位置，刀尖一闪刺向他的腿。卢拦得不全，棉裤破一口，皮上见血；他左膝往后一缩，棒头乘对方刺尽时击在持刀腕的外侧。腕没折，刀也没立时飞，刀手却不得不收回护身。",
+          "url": "/images/novels/jichuan/chapter-09-2.webp",
+          "original": null
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "sourceFile": "济川山河录·第十章.md",
+      "title": "第十章　假牒封门惊病客／断绳开道护归人",
+      "hash": "300efb97d18e42292ef28ec300c27dc9044675269514842b417aeadcc7a23407",
+      "url": "/novels/jichuan/chapter-10/",
+      "scenes": [
+        {
+          "id": "chapter-10-3",
+          "caption": "解绳护婴",
+          "paragraphIndex": 27,
+          "anchor": "门外后列仍不知前头出了刀。有人喊“有疫”，有人喊“杀人”，两种话都比“把道让开”跑得快。后面那匹驴受声惊，拖着倒了半边的担子往门里挤；前排一个抱婴的妇人退到郭氏车侧，脚被绳圈住。裴先告她莫挣，托住抱儿那侧的肘，让她将重心移到未缠的脚上，再俯身抬绳。姜守拙纸上“留中、勿逼”的两只手，隔了数日才在这拥挤门道里替一个陌生妇人留出半步；裴右掌旧伤仍被绳勒得抽痛。一个挑夫把担子侧过去，恰好又堵住门洞。人若各自只求离郭车远些，三列便会在同一丈地上相撞。",
+          "excerpt": "持刃者看两名兵卒从门侧来，没同他们正面比刀。他忽把绳往郭车轮上一绕，掀起另一头搭在后车木辕。两车相距不满一丈，郭氏被挡在中间；谁若直刺他，郭氏与她儿子的车都在刀前。他把自己的退路选在人最多的地方，是懂得这几名守门者先顾什么。沈不再逼近，指给兵卒看车轮上的绳：若拉一端，车必朝人倒，得先扶车。一个兵卒持盾护郭氏出来，另一个把持刀者的脚限定在木桩边。持刃者刀路轻快，砍到盾沿，却越不过木桩与车辕夹成的窄角。\n\n门外后列仍不知前头出了刀。有人喊“有疫”，有人喊“杀人”，两种话都比“把道让开”跑得快。后面那匹驴受声惊，拖着倒了半边的担子往门里挤；前排一个抱婴的妇人退到郭氏车侧，脚被绳圈住。裴先告她莫挣，托住抱儿那侧的肘，让她将重心移到未缠的脚上，再俯身抬绳。姜守拙纸上“留中、勿逼”的两只手，隔了数日才在这拥挤门道里替一个陌生妇人留出半步；裴右掌旧伤仍被绳勒得抽痛。一个挑夫把担子侧过去，恰好又堵住门洞。人若各自只求离郭车远些，三列便会在同一丈地上相撞。\n\n城西旧晒谷场的许敬存听闻门前乱，带邓衡与几名新募者来，未自称奉令接管城门。守门军吏见许是掌募者，叫他帮把候门的人分回两道，自己仍管门与刀。高信也在新募者里，手上拇指裂口未全合。他见前头木绳交错，先想冲到持刃者身后，孟先简一把拉住：“门下有兵，轮不到你添一根杆。去把这列人往土埂上引。”高信这次没有拿“我也有胆”回嘴。他同另外两人将木杆平端在胸前，只作一条会后退的界，不拿尖端对着百姓；驴若撞来，他们亦不能硬扛，便留出宽处让赶驴者能斜拉缰。",
+          "prompt": "Use case: illustration-story. One wide landscape 16:9 Chinese anime wuxia illustration infused with traditional Chinese ink wash aesthetics, elegant clean 2D character linework, restrained cel shading, expressive grounded martial movements, atmospheric ink mountains and generous painterly negative space for the original historical novel 济川山河录. Tang dynasty Tianbao-era winter in the Luoyang/Mengjin region. Ink teal, winter grey, parchment and warm lantern light; beautiful refined guofeng animation storytelling, Qinglü landscape accents, traditional cultural grace; show restraint, compassion and keeping promises through the actual character action, never invent sect symbols or supernatural powers. NO text, captions, logos, watermark, modern objects, fantasy energy, flying martial artists, exaggerated gore. Weapons, hand positions, people, geography and injuries MUST follow the Chinese source excerpt. Do not invent additional battles. Frame grounded physical movement, clear silhouettes, credible anatomy. Chinese source is authoritative, character style details only fill unspecified appearances.\nScene focus: 解绳护婴. Depict ONE coherent moment from this excerpt, prioritizing the middle paragraph.\n持刃者看两名兵卒从门侧来，没同他们正面比刀。他忽把绳往郭车轮上一绕，掀起另一头搭在后车木辕。两车相距不满一丈，郭氏被挡在中间；谁若直刺他，郭氏与她儿子的车都在刀前。他把自己的退路选在人最多的地方，是懂得这几名守门者先顾什么。沈不再逼近，指给兵卒看车轮上的绳：若拉一端，车必朝人倒，得先扶车。一个兵卒持盾护郭氏出来，另一个把持刀者的脚限定在木桩边。持刃者刀路轻快，砍到盾沿，却越不过木桩与车辕夹成的窄角。\n\n门外后列仍不知前头出了刀。有人喊“有疫”，有人喊“杀人”，两种话都比“把道让开”跑得快。后面那匹驴受声惊，拖着倒了半边的担子往门里挤；前排一个抱婴的妇人退到郭氏车侧，脚被绳圈住。裴先告她莫挣，托住抱儿那侧的肘，让她将重心移到未缠的脚上，再俯身抬绳。姜守拙纸上“留中、勿逼”的两只手，隔了数日才在这拥挤门道里替一个陌生妇人留出半步；裴右掌旧伤仍被绳勒得抽痛。一个挑夫把担子侧过去，恰好又堵住门洞。人若各自只求离郭车远些，三列便会在同一丈地上相撞。\n\n城西旧晒谷场的许敬存听闻门前乱，带邓衡与几名新募者来，未自称奉令接管城门。守门军吏见许是掌募者，叫他帮把候门的人分回两道，自己仍管门与刀。高信也在新募者里，手上拇指裂口未全合。他见前头木绳交错，先想冲到持刃者身后，孟先简一把拉住：“门下有兵，轮不到你添一根杆。去把这列人往土埂上引。”高信这次没有拿“我也有胆”回嘴。他同另外两人将木杆平端在胸前，只作一条会后退的界，不拿尖端对着百姓；驴若撞来，他们亦不能硬扛，便留出宽处让赶驴者能斜拉缰。",
+          "url": "/images/novels/jichuan/chapter-10-3.webp",
+          "original": null
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "sourceFile": "济川山河录·第十一章.md",
+      "title": "第十一章　武牢战鼓催新卒／洛水残灯候故人",
+      "hash": "6816b9bfabb90d19bccb3e2e6ce11bc459a6dc8337b46b1f5a7313a5201bda73",
+      "url": "/novels/jichuan/chapter-11/",
+      "scenes": [
+        {
+          "id": "chapter-11-2",
+          "caption": "退路护车",
+          "paragraphIndex": 55,
+          "anchor": "高信此时照许的令拉骡，发现前索与一辆相邻车缠在一起。杜老七已经跳下去解。他手快，先解自己车头活结；相邻车的赶者却因惧马，把不该缠的横索也紧了两圈。若硬拖，两车会一同横在路中。高信举木杆要撬，杜喝他别把手伸轮辐，叫他从车侧顶横木、待相邻车先向后退半尺。两人把车错开，尚有两名伤者坐在车板，惊得要往下跳。高信叫他们别动，一人听、一人仍撑腿；他只好先扶那一人坐住，车因这一停又慢了一刻。",
+          "excerpt": "孟所在小队起初挺槊挡住了一骑。马在长尖前偏转，孟的槊头随之偏了半尺；旁侧另两骑趁几名新卒追那匹马时撞进空出的角。孟喝令收槊，前头的人紧张，杆柄碰了旁人肩，阵角慢了一息。骑士投出的短矛击中一人胸侧，那人栽下；另一个想扶，手中槊尾落地，把自己后列绊住。孟用枪尾向下压开那杆，先叫后列退到土坎边。偏马、收槊、后退本是三件相接的事，新卒只做对第一件，第二件便生出一道容两骑穿入的缝。\n\n高信此时照许的令拉骡，发现前索与一辆相邻车缠在一起。杜老七已经跳下去解。他手快，先解自己车头活结；相邻车的赶者却因惧马，把不该缠的横索也紧了两圈。若硬拖，两车会一同横在路中。高信举木杆要撬，杜喝他别把手伸轮辐，叫他从车侧顶横木、待相邻车先向后退半尺。两人把车错开，尚有两名伤者坐在车板，惊得要往下跳。高信叫他们别动，一人听、一人仍撑腿；他只好先扶那一人坐住，车因这一停又慢了一刻。\n\n前头败下的人开始多。许敬存骑来，马腹沾泥，命车转向西侧较宽的埂路，先接近处伤者，不许为搬整车水堵死行人的退处。许口中令短，眼中却一直看另一股人从低道涌来：若那边也被骑冲散，西埂会挤得过不去。高信问孟在哪里，许说他还在土坎一边收人，不许高信丢车去寻。高信想争“他教过我”，却看见车板上那名小腿箭伤者正因震动握住车沿。师傅在前不等于这两名伤者忽然无人领。",
+          "prompt": "Use case: illustration-story. One wide landscape 16:9 Chinese anime wuxia illustration infused with traditional Chinese ink wash aesthetics, elegant clean 2D character linework, restrained cel shading, expressive grounded martial movements, atmospheric ink mountains and generous painterly negative space for the original historical novel 济川山河录. Tang dynasty Tianbao-era winter in the Luoyang/Mengjin region. Ink teal, winter grey, parchment and warm lantern light; beautiful refined guofeng animation storytelling, Qinglü landscape accents, traditional cultural grace; show restraint, compassion and keeping promises through the actual character action, never invent sect symbols or supernatural powers. NO text, captions, logos, watermark, modern objects, fantasy energy, flying martial artists, exaggerated gore. Weapons, hand positions, people, geography and injuries MUST follow the Chinese source excerpt. Do not invent additional battles. Frame grounded physical movement, clear silhouettes, credible anatomy. Chinese source is authoritative, character style details only fill unspecified appearances.\nScene focus: 退路护车. Depict ONE coherent moment from this excerpt, prioritizing the middle paragraph.\n孟所在小队起初挺槊挡住了一骑。马在长尖前偏转，孟的槊头随之偏了半尺；旁侧另两骑趁几名新卒追那匹马时撞进空出的角。孟喝令收槊，前头的人紧张，杆柄碰了旁人肩，阵角慢了一息。骑士投出的短矛击中一人胸侧，那人栽下；另一个想扶，手中槊尾落地，把自己后列绊住。孟用枪尾向下压开那杆，先叫后列退到土坎边。偏马、收槊、后退本是三件相接的事，新卒只做对第一件，第二件便生出一道容两骑穿入的缝。\n\n高信此时照许的令拉骡，发现前索与一辆相邻车缠在一起。杜老七已经跳下去解。他手快，先解自己车头活结；相邻车的赶者却因惧马，把不该缠的横索也紧了两圈。若硬拖，两车会一同横在路中。高信举木杆要撬，杜喝他别把手伸轮辐，叫他从车侧顶横木、待相邻车先向后退半尺。两人把车错开，尚有两名伤者坐在车板，惊得要往下跳。高信叫他们别动，一人听、一人仍撑腿；他只好先扶那一人坐住，车因这一停又慢了一刻。\n\n前头败下的人开始多。许敬存骑来，马腹沾泥，命车转向西侧较宽的埂路，先接近处伤者，不许为搬整车水堵死行人的退处。许口中令短，眼中却一直看另一股人从低道涌来：若那边也被骑冲散，西埂会挤得过不去。高信问孟在哪里，许说他还在土坎一边收人，不许高信丢车去寻。高信想争“他教过我”，却看见车板上那名小腿箭伤者正因震动握住车沿。师傅在前不等于这两名伤者忽然无人领。",
+          "url": "/images/novels/jichuan/chapter-11-2.webp",
+          "original": null
+        }
+      ]
+    }
+  ]
+}

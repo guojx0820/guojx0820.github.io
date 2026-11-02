@@ -1,12 +1,11 @@
 ---
 title: "第二章　断橹留成生死债／寒灯照见往来人"
-description: "《济川山河录》第2章"
-type: "novel"
+type: novel
 ---
 
-[← 上一章](/novels/jichuan/chapter-01/)　|　[返回《济川山河录》目录](/novels/jichuan/)　|　[下一章 →](/novels/jichuan/chapter-03/)
-
----
+<div class="novel-shell novel-reader" data-novel-book="jichuan" data-chapter="2">
+<div class="novel-reading-bar"><a href="/novels/jichuan/">《济川山河录》 · 第2章</a><div role="group" aria-label="阅读字号"><button type="button" data-font="down" aria-label="缩小字号">A−</button><button type="button" data-font="reset">默认</button><button type="button" data-font="up" aria-label="增大字号">A＋</button></div></div>
+<nav class="novel-chapter-nav" aria-label="章节导航"><a href="/novels/jichuan/chapter-01/">← 上一章</a><a href="/novels/jichuan/">作品目录</a><a href="/novels/jichuan/chapter-03/">下一章 →</a></nav>
 
 陶行简进门时，先把手伸到炉上烤。
 
@@ -1664,12 +1663,6 @@ type: "novel"
 
 **第二章完**
 
-
-
-
-
-
-
----
-
-[← 上一章](/novels/jichuan/chapter-01/)　|　[返回《济川山河录》目录](/novels/jichuan/)　|　[下一章 →](/novels/jichuan/chapter-03/)
+<nav class="novel-chapter-nav" aria-label="章节导航"><a href="/novels/jichuan/chapter-01/">← 上一章</a><a href="/novels/jichuan/">作品目录</a><a href="/novels/jichuan/chapter-03/">下一章 →</a></nav>
+<p class="novel-small">本章正文已更新，原创插图将陆续补齐。</p>
+</div>

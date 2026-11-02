@@ -860,6 +860,7 @@ inject:
     - <link rel="stylesheet" href="/css/iconfont.css">
     - <link rel="stylesheet" href="/css/font-awesome.min.css">
     - <link rel="stylesheet" href="/css/heartbeat.css">
+    - <link rel="stylesheet" href="/css/novels.css">
     - <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sviptzk/StaticFile_HEXO@latest/butterfly/css/macblack.css">
     - <script src="/live2d-widget/autoload.js"></script>
 
@@ -868,6 +869,7 @@ inject:
     - <script src="/js/mobile_side.js"></script>
     - <script src="/js/lazyload-fallback.js"></script>
     - <script src="/js/footer-heartbeat.js"></script>
+    - <script src="/js/novels.js"></script>
 # CDN
 # Don't modify the following settings unless you know how they work
 # 非必要請不要修改

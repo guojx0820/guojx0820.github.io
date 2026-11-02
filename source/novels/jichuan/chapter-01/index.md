@@ -1,12 +1,11 @@
 ---
 title: "第一章　孟津夜渡承孤诺／洛水寒灯认旧盟"
-description: "《济川山河录》第1章"
-type: "novel"
+type: novel
 ---
 
-[返回《济川山河录》目录](/novels/jichuan/)　|　[下一章 →](/novels/jichuan/chapter-02/)
-
----
+<div class="novel-shell novel-reader" data-novel-book="jichuan" data-chapter="1">
+<div class="novel-reading-bar"><a href="/novels/jichuan/">《济川山河录》 · 第1章</a><div role="group" aria-label="阅读字号"><button type="button" data-font="down" aria-label="缩小字号">A−</button><button type="button" data-font="reset">默认</button><button type="button" data-font="up" aria-label="增大字号">A＋</button></div></div>
+<nav class="novel-chapter-nav" aria-label="章节导航"><span>卷首</span><a href="/novels/jichuan/">作品目录</a><a href="/novels/jichuan/chapter-02/">下一章 →</a></nav>
 
 鲁怀川从河里捞起第一个人时，那人已经死了。
 
@@ -23,6 +22,8 @@ type: "novel"
 “再帮一把！”
 
 两人合力，将伤者翻上船板。
+
+<figure class="novel-figure"><img src="/images/novels/jichuan/chapter-01-1.webp" alt="寒江救客" width="1400" height="788" loading="lazy" decoding="async"><figcaption>寒江救客 · 原创情节插图</figcaption></figure>
 
 伤者蜷了一下，嘴里吐出水，右手仍紧攥着一团东西。鲁怀川解开他颈边的衣带，湿衣贴着皮肉，胸口有一道斜着的伤，血被河水洗淡，又一缕缕往外渗。
 
@@ -2015,11 +2016,6 @@ type: "novel"
 
 **第一章完**
 
-
-
-
-
-
----
-
-[返回《济川山河录》目录](/novels/jichuan/)　|　[下一章 →](/novels/jichuan/chapter-02/)
+<nav class="novel-chapter-nav" aria-label="章节导航"><span>卷首</span><a href="/novels/jichuan/">作品目录</a><a href="/novels/jichuan/chapter-02/">下一章 →</a></nav>
+<p class="novel-small">本章含 1 幅 AI 辅助原创插图，情节以正文为准。</p>
+</div>

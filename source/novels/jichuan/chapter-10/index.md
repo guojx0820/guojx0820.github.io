@@ -1,12 +1,11 @@
 ---
 title: "第十章　假牒封门惊病客／断绳开道护归人"
-description: "《济川山河录》第10章"
-type: "novel"
+type: novel
 ---
 
-[← 上一章](/novels/jichuan/chapter-09/)　|　[返回《济川山河录》目录](/novels/jichuan/)　|　[下一章 →](/novels/jichuan/chapter-11/)
-
----
+<div class="novel-shell novel-reader" data-novel-book="jichuan" data-chapter="10">
+<div class="novel-reading-bar"><a href="/novels/jichuan/">《济川山河录》 · 第10章</a><div role="group" aria-label="阅读字号"><button type="button" data-font="down" aria-label="缩小字号">A−</button><button type="button" data-font="reset">默认</button><button type="button" data-font="up" aria-label="增大字号">A＋</button></div></div>
+<nav class="novel-chapter-nav" aria-label="章节导航"><a href="/novels/jichuan/chapter-09/">← 上一章</a><a href="/novels/jichuan/">作品目录</a><a href="/novels/jichuan/chapter-11/">下一章 →</a></nav>
 
 西门外那辆车里的人已经死了，推车的母亲却说他睡着。
 
@@ -314,7 +313,6 @@ type: "novel"
 
 **第十章完**
 
-
----
-
-[← 上一章](/novels/jichuan/chapter-09/)　|　[返回《济川山河录》目录](/novels/jichuan/)　|　[下一章 →](/novels/jichuan/chapter-11/)
+<nav class="novel-chapter-nav" aria-label="章节导航"><a href="/novels/jichuan/chapter-09/">← 上一章</a><a href="/novels/jichuan/">作品目录</a><a href="/novels/jichuan/chapter-11/">下一章 →</a></nav>
+<p class="novel-small">本章正文已更新，原创插图将陆续补齐。</p>
+</div>

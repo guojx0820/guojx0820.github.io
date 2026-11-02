@@ -1,35 +1,8 @@
 ---
 title: "济川山河录"
-description: "一部以天宝末年洛阳与河洛道路为背景的原创历史武侠小说。"
-type: "novel"
+type: novel
 ---
 
-# 济川山河录
-
-> 原创历史武侠长篇。故事从孟津夜渡展开，人物在战乱将至的河洛之间护送伤者、查验药账、守护百姓，也在一次次选择中承担各自的生死与旧诺。
-
-本专栏按章连载。点击章节标题即可阅读；每章配图将在对应章节页随连载补齐。
-
-## 章节目录
-
-1. [第1章　孟津夜渡承孤诺／洛水寒灯认旧盟](/novels/jichuan/chapter-01/)
-2. [第2章　断橹留成生死债／寒灯照见往来人](/novels/jichuan/chapter-02/)
-3. [第3章　纸上亡魂归旧渡／弦间生路入寒芦](/novels/jichuan/chapter-03/)
-4. [第4章　旧院悬灯遮血债／长街飞矢护归人](/novels/jichuan/chapter-04/)
-5. [第5章　半纸病书争北路／一篷寒火照归人](/novels/jichuan/chapter-05/)
-6. [第6章　西坊双契争生药／短巷横枪护病车](/novels/jichuan/chapter-06/)
-7. [第7章　死者旧名牵药债／生人寒夜守残灯](/novels/jichuan/chapter-07/)
-8. [第8章　铁篓拆封惊西坊／寒场试刃见新兵](/novels/jichuan/chapter-08/)
-9. [第9章　废渡寒烟藏病客／残笺假押引来人](/novels/jichuan/chapter-09/)
-10. [第10章　假牒封门惊病客／断绳开道护归人](/novels/jichuan/chapter-10/)
-11. [第11章　武牢战鼓催新卒／洛水残灯候故人](/novels/jichuan/chapter-11/)
-
-
-## 连载说明
-
-- 作品：济川山河录
-- 类型：历史武侠 / 群像 / 河洛风云
-- 正文以本专栏章节页为准。
-- 其他小说将保留独立专栏入口，后续按作品分别建立目录。
-
-[返回小说总目录](/novels/)
+<div class="novel-shell novel-detail" data-novel-book="jichuan">
+<a class="novel-back" href="/novels/">← 返回小说书架</a><div class="novel-detail-hero"><div class="novel-detail-cover"><img src="/images/novels/jichuan/cover.webp" alt="济川山河录正式封面：孟津寒江孤舟" width="900" height="1350" loading="eager"></div><div><div class="novel-kicker">河洛风雪 · 原创历史武侠</div><h1>济川山河录</h1><div class="novel-meta"><span class="novel-badge">连载中</span><span>历史武侠 · 河洛群像</span><span>已更新 11 章</span></div><p class="novel-lead">一场孟津夜渡，一句生死托付。船户、医者与守城新卒，在天宝末年的河洛风雪中护人、守诺，追寻一条牵动生死的旧药路。</p><p>写人如何在乱世中护住眼前的人，也写一只旧橹、一张药账、一盏寒灯如何承载一个人的选择。</p><div class="novel-actions"><a class="novel-button" href="/novels/jichuan/chapter-01/">开始阅读</a><a class="novel-button novel-secondary" href="/novels/jichuan/chapter-11/">最新章节 · 第11章</a><a class="novel-button novel-secondary" data-resume hidden href="/novels/jichuan/chapter-01/">继续阅读</a></div><p class="novel-small">作者：洛沐　｜　插图版已完成 1/11 章</p></div></div>
+<div class="novel-section-heading"><h2>章节目录</h2><span>顺序阅读 · 全文连载</span></div><ol class="novel-chapter-grid"><li><a href="/novels/jichuan/chapter-01/"><span class="novel-chapter-number">01</span><span>孟津夜渡承孤诺／洛水寒灯认旧盟<small>插图版 · 关键场景插图</small></span></a></li><li><a href="/novels/jichuan/chapter-02/"><span class="novel-chapter-number">02</span><span>断橹留成生死债／寒灯照见往来人<small>正文版 · 插图制作中</small></span></a></li><li><a href="/novels/jichuan/chapter-03/"><span class="novel-chapter-number">03</span><span>纸上亡魂归旧渡／弦间生路入寒芦<small>正文版 · 插图制作中</small></span></a></li><li><a href="/novels/jichuan/chapter-04/"><span class="novel-chapter-number">04</span><span>旧院悬灯遮血债／长街飞矢护归人<small>正文版 · 插图制作中</small></span></a></li><li><a href="/novels/jichuan/chapter-05/"><span class="novel-chapter-number">05</span><span>半纸病书争北路／一篷寒火照归人<small>正文版 · 插图制作中</small></span></a></li><li><a href="/novels/jichuan/chapter-06/"><span class="novel-chapter-number">06</span><span>西坊双契争生药／短巷横枪护病车<small>正文版 · 插图制作中</small></span></a></li><li><a href="/novels/jichuan/chapter-07/"><span class="novel-chapter-number">07</span><span>死者旧名牵药债／生人寒夜守残灯<small>正文版 · 插图制作中</small></span></a></li><li><a href="/novels/jichuan/chapter-08/"><span class="novel-chapter-number">08</span><span>铁篓拆封惊西坊／寒场试刃见新兵<small>正文版 · 插图制作中</small></span></a></li><li><a href="/novels/jichuan/chapter-09/"><span class="novel-chapter-number">09</span><span>废渡寒烟藏病客／残笺假押引来人<small>正文版 · 插图制作中</small></span></a></li><li><a href="/novels/jichuan/chapter-10/"><span class="novel-chapter-number">10</span><span>假牒封门惊病客／断绳开道护归人<small>正文版 · 插图制作中</small></span></a></li><li><a href="/novels/jichuan/chapter-11/"><span class="novel-chapter-number">11</span><span>武牢战鼓催新卒／洛水残灯候故人<small>正文版 · 插图制作中</small></span></a></li></ol><p class="novel-small">故事为原创虚构。章节插图为 AI 辅助创作的场景演绎；正文叙述为情节依据。</p></div>

@@ -15,7 +15,9 @@
     "images:check:strict": "node tools/check-image-urls.mjs --strict",
     "check:secrets": "node tools/check-secrets.mjs",
     "check:abbrlinks": "node tools/check-abbrlinks.mjs",
-    "check": "npm run check:secrets && npm run check:abbrlinks && npm run build"
+    "check": "npm run check:secrets && npm run check:abbrlinks && npm run build",
+    "novels:sync": "node tools/sync-novels.mjs",
+    "novels:check": "node tools/check-novels.mjs"
   },
   "engines": {
     "node": ">=18.18.0"
