@@ -821,6 +821,8 @@ type: novel
 
 卢和周进来，没有用三柄刃在这么窄的地方一齐捅。他们先让田退到墙边，季守正门，卢逼褚握刀的右侧，周堵后窗。褚知道再退就只会把自己夹在柜与墙间，反朝卢冲。
 
+<figure class="novel-figure"><img src="/images/novels/jichuan/chapter-05-2.webp" alt="西坡狭屋" width="1400" height="788" loading="lazy" decoding="async"><figcaption>西坡狭屋 · 原创情节插图</figcaption></figure>
+
 若卢此时还像早几日那样用包过的手去扣腕，褚有足够的劲折回；他却没有。刀只在外面逼刃，自己让开半步，把一条通向屋外的路留下。
 
 褚看见路，冲过去，正迎上县中见证人从门外横举的长杖。
@@ -1244,5 +1246,5 @@ type: novel
 **第五章完**
 
 <nav class="novel-chapter-nav" aria-label="章节导航"><a href="/novels/jichuan/chapter-04/">← 上一章</a><a href="/novels/jichuan/">作品目录</a><a href="/novels/jichuan/chapter-06/">下一章 →</a></nav>
-<p class="novel-small">本章正文已更新，原创插图将陆续补齐。</p>
+<p class="novel-small">本章含 1 幅 AI 辅助原创插图，情节以正文为准。</p>
 </div>
