@@ -1013,6 +1013,8 @@ type: novel
 
 师父从《礼记·大学》取“知止”二字，给这守势作名。裴照野从前总觉得名字大，练法小：端一盆水，让老人从两侧推，脚退多半步便撞门槛，硬站着不退又将水洒尽。方才他收肘、斜进、借肩，只走到褚衡伤肩迫其松手的那一步；再追一步，药囊在身后破开，许满的棍便护不到他。
 
+<figure class="novel-figure"><img src="/images/novels/jichuan/chapter-02-2.webp" alt="知止脱扣" width="1400" height="788" loading="lazy" decoding="async"><figcaption>知止脱扣 · 原创情节插图</figcaption></figure>
+
 方才没有那几年的水盆，他的手大概已经被针穿透。
 
 但听见褚衡也知道这两个字，他没有觉得亲近。
@@ -1664,5 +1666,5 @@ type: novel
 **第二章完**
 
 <nav class="novel-chapter-nav" aria-label="章节导航"><a href="/novels/jichuan/chapter-01/">← 上一章</a><a href="/novels/jichuan/">作品目录</a><a href="/novels/jichuan/chapter-03/">下一章 →</a></nav>
-<p class="novel-small">本章正文已更新，原创插图将陆续补齐。</p>
+<p class="novel-small">本章含 1 幅 AI 辅助原创插图，情节以正文为准。</p>
 </div>
