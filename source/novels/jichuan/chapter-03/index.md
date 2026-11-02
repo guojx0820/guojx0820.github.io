@@ -1003,6 +1003,8 @@ type: novel
 
 沈蘅芜松弓，以弓弦兜住他胸前衣带，向旁猛扯。她右脚落在坡下较实的一片泥上，才没被他反带过去；弦只拽歪他半步，给许满留出收刀的空。弓梢却承不住两人急力，裂纹立即发响。
 
+<figure class="novel-figure"><img src="/images/novels/jichuan/chapter-03-3.webp" alt="破弓脱险" width="1400" height="788" loading="lazy" decoding="async"><figcaption>破弓脱险 · 原创情节插图</figcaption></figure>
+
 褚衡的小刀从她小臂边划过，衣破，皮开。她拉人那一下让自己避不全，血流进右袖。
 
 裴照野站稳，右手仍抓残竹，左腕又被牵痛。他不能再同伤肩的褚衡硬比第二次。对方虽伤，仍比他们更懂如何在三个人之间占位。
@@ -1522,5 +1524,5 @@ type: novel
 **第三章完**
 
 <nav class="novel-chapter-nav" aria-label="章节导航"><a href="/novels/jichuan/chapter-02/">← 上一章</a><a href="/novels/jichuan/">作品目录</a><a href="/novels/jichuan/chapter-04/">下一章 →</a></nav>
-<p class="novel-small">本章正文已更新，原创插图将陆续补齐。</p>
+<p class="novel-small">本章含 1 幅 AI 辅助原创插图，情节以正文为准。</p>
 </div>
